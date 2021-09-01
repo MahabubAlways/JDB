@@ -1,0 +1,41 @@
+.heroContainer {
+  position: relative;
+  display: flex;
+  width: 92%;
+  margin-left: 8%;
+  height: 100vh;
+  margin-top: -100px;
+  align-items: center;
+  z-index: 1;
+  .leftContent {
+    width: 30%;
+    padding-inline-end: 10%;
+    h1 {
+      font-family: Barlow;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 65px;
+      margin-block: 15px;
+    }
+    p {
+      font-family: Barlow;
+      font-weight: 500;
+      font-size: 18px;
+      margin-block: 10px;
+    }
+    .HeroBtn {
+      display: inline-block;
+      text-decoration: none;
+      background: #000;
+      color: #fec707;
+      font-family: Barlow;
+      font-weight: 600;
+      padding: 12px 36px;
+      margin-top: 20px;
+    }
+  }
+  .rightContent {
+    width: 70%;
+    height: 100vh;
+  }
+}
