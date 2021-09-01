@@ -1,5 +1,4 @@
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import React from 'react';
 import * as styles from './header.module.scss';
 
@@ -10,7 +9,7 @@ const Header = ({path}) => {
             <div className={styles.headerContainer}>
                 <div className={styles.logo}>
                     <Link aria-label="logo" to="/">
-                        <StaticImage width={120} loading="eager" src="../../../images/JDB-Logo-Black.png" alt="Logo" />
+                        <img src="/images/JDB-Logo-Black.png" alt="Logo" />
                     </Link>
                 </div>
                 <div className={`${styles.navbar} ${path === '/' ? styles.homeNav : ''}`}>

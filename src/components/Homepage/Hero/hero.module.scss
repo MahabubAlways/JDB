@@ -1,14 +1,29 @@
 .heroContainer {
   position: relative;
   display: flex;
-  width: 92%;
-  margin-left: 8%;
   height: 100vh;
   margin-top: -100px;
   align-items: center;
   z-index: 1;
   .leftContent {
-    width: 30%;
+    width: 8%;
+    .ChargeArrow {
+      p {
+        font-family: Barlow;
+        font-weight: 600;
+        position: absolute;
+        bottom: 120px;
+        left: -20px;
+        transform: rotate(90deg);
+      }
+      .ChargeArrowDown {
+        margin-left: 10px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  .middleContent {
+    width: 22%;
     padding-inline-end: 10%;
     h1 {
       font-family: Barlow;
@@ -35,7 +50,46 @@
     }
   }
   .rightContent {
-    width: 70%;
+    width: 62%;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    .marqueeContainer {
+      position: relative;
+      overflow: hidden;
+      .marqueeLeftInner {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        .marquee {
+          font-family: Playfair Display;
+          font-weight: 800;
+          font-style: italic;
+          font-size: 265px;
+          padding: 0 100px;
+          margin: 0;
+          -webkit-text-stroke: 1px white;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .marqueeRightInner {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        .marquee {
+          font-family: Playfair Display;
+          font-weight: 800;
+          font-style: italic;
+          font-size: 350px;
+          margin-top: -60px;
+          padding: 0 100px;
+          margin: 0;
+          -webkit-text-stroke: 1px white;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
   }
 }
