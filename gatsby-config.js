@@ -14,13 +14,13 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap.xml`,
-        sitemapSize: 5000
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-sitemap`,
+    //   options: {
+    //     output: `/sitemap.xml`,
+    //     sitemapSize: 5000
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
