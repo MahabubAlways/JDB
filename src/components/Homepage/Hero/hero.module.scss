@@ -4,6 +4,7 @@
   height: 100vh;
   margin-top: -100px;
   align-items: center;
+  overflow: hidden;
   z-index: 1;
   .leftContent {
     width: 8%;
@@ -56,6 +57,7 @@
     background-size: cover;
     background-position: center center;
     position: relative;
+    overflow: hidden;
     .marqueeContainer {
       position: relative;
       overflow: hidden;

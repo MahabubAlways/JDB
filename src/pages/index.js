@@ -1,5 +1,6 @@
 import * as React from "react"
 import Future from "../components/Homepage/Future"
+import GetInTouch from "../components/Homepage/GetInTouch"
 import Hero from "../components/Homepage/Hero"
 import HeroBottom from "../components/Homepage/HeroBottom"
 import Services from "../components/Homepage/Services"
@@ -17,6 +18,7 @@ const IndexPage = (props) => {
       <Services />
       <Future />
       <Vision />
+      <GetInTouch />
     </Layouts>
   )
 }
