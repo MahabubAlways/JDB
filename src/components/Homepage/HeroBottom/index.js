@@ -15,9 +15,9 @@ const HeroBottom = () => {
             </div>
             <div className={styles.middle}>
                 <ul>
-                    <li><a href="/">Growth</a></li>
-                    <li><a href="/">Marketing & Creative</a></li>
-                    <li><a href="/">Development</a></li>
+                    <li>Growth</li>
+                    <li>Marketing & Creative</li>
+                    <li>Development</li>
                 </ul>
             </div>
             <div className={styles.right}>

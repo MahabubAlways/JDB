@@ -19,28 +19,28 @@ const Footer = () => {
                     <div className={styles.footerMenu}>
                         <h3>About Us</h3>
                         <ul>
-                            <li><Link to="/">Our Blog</Link></li>
-                            <li><Link to="/">Careers</Link></li>
-                            <li><Link to="/">News</Link></li>
-                            <li><Link to="/">Help Center</Link></li>
+                            <li>Our Blog</li>
+                            <li>Careers</li>
+                            <li>News</li>
+                            <li>Help Center</li>
                         </ul>
                     </div>
                     <div className={styles.footerMenu}>
                         <h3>Services</h3>
                         <ul>
-                            <li><Link to="/">Growth</Link></li>
-                            <li><Link to="/">Marketing</Link></li>
-                            <li><Link to="/">Creative</Link></li>
-                            <li><Link to="/">Development</Link></li>
+                            <li>Growth</li>
+                            <li>Marketing</li>
+                            <li>Creative</li>
+                            <li>Development</li>
                         </ul>
                     </div>
                     <div className={styles.footerMenu}>
                         <h3>Contact</h3>
                         <ul>
-                            <li><Link to="/">The Team</Link></li>
-                            <li><Link to="/">Canada</Link></li>
-                            <li><Link to="/">Aruba</Link></li>
-                            <li><Link to="/">Bogotá</Link></li>
+                            <li>The Team</li>
+                            <li>Canada</li>
+                            <li>Aruba</li>
+                            <li>Bogotá</li>
                         </ul>
                     </div>
                 </div>
