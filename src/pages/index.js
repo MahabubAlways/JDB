@@ -4,6 +4,7 @@ import Hero from "../components/Homepage/Hero"
 import HeroBottom from "../components/Homepage/HeroBottom"
 import Services from "../components/Homepage/Services"
 import TrustedPartner from "../components/Homepage/TrustedPartner"
+import Vision from "../components/Homepage/Vision"
 import Layouts from "../components/Layouts"
 
 const IndexPage = (props) => {
@@ -15,6 +16,7 @@ const IndexPage = (props) => {
       <TrustedPartner />
       <Services />
       <Future />
+      <Vision />
     </Layouts>
   )
 }

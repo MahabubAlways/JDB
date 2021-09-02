@@ -1,0 +1,41 @@
+.vision {
+  display: flex;
+  .left {
+    width: 50%;
+    background: #3b3438;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .content {
+      padding-inline: 15%;
+      margin-top: -50px;
+      h2 {
+        font-family: Barlow;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 38px;
+        color: #fff;
+      }
+      p {
+        font-family: Barlow;
+        color: #fff;
+      }
+    }
+    .btnContainer {
+      padding-left: 15%;
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        background: #fff;
+        color: #e61d48;
+        font-family: Barlow;
+        font-weight: 600;
+        padding: 12px 36px;
+        margin-top: 20px;
+      }
+    }
+  }
+  .right {
+    width: 50%;
+  }
+}
