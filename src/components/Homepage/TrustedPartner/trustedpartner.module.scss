@@ -1,0 +1,40 @@
+.TrustedPartner {
+  display: flex;
+  .Image {
+    width: 50%;
+  }
+  .ContentContainer {
+    width: 50%;
+    background: #000;
+    .Content {
+      padding: 15% 20% 0;
+      color: #fff;
+      h2 {
+        font-family: Barlow;
+        font-style: italic;
+        font-size: 48px;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+      p {
+        font-family: Barlow;
+        font-size: 16px;
+      }
+    }
+    .seeBtn {
+      font-family: Barlow;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      margin-left: 20%;
+      background: #fff;
+      color: #e61d48;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 10px 25px;
+      border-color: transparent;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.HeroBottom {
+  display: flex;
+  width: 84%;
+  margin: 0 auto;
+  height: 100px;
+  align-items: center;
+  .left {
+    width: 33.333333%;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      li {
+        margin-right: 20px;
+        a {
+          font-family: Barlow;
+          text-decoration: none;
+          color: #000;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .middle {
+    width: 33.333333%;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      li {
+        margin-right: 20px;
+        max-width: 95px;
+        a {
+          text-transform: uppercase;
+          font-family: Barlow;
+          text-decoration: none;
+          color: #000;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .right {
+    width: 33.333333%;
+    text-align: right;
+    .searchBtn {
+      background: transparent;
+      border: none;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: Barlow;
+      .faSearch {
+        margin-left: 20px;
+      }
+    }
+  }
+}
