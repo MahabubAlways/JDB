@@ -37,8 +37,8 @@ module.exports = {
               variants: ["400", "500", "600", "700"],
             },
             {
-              family: "Playfair Display",
-              variants: ["400", "600", "800"],
+              family: "Playfair Display:ital",
+              variants: ["400", "400i", "600", "600i", "800", "800i"],
             },
           ]
         }

@@ -1,0 +1,54 @@
+.services {
+  display: flex;
+  .service {
+    position: relative;
+    width: 33.333333%;
+    display: flex;
+    flex-direction: column;
+    &:nth-child(1) {
+      background: #3b3438;
+    }
+    &:nth-child(2) {
+      background: #666264;
+    }
+    &:nth-child(3) {
+      background: #999a9b;
+    }
+    .content {
+      text-align: center;
+      padding: 100px 50px 80px;
+      h2 {
+        font-family: "Playfair Display";
+        font-style: italic;
+        font-weight: 600;
+        font-size: 38px;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      p {
+        font-family: Barlow;
+        font-style: italic;
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+    .btnContainer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 20px;
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        .faChevronRight {
+          color: #000;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

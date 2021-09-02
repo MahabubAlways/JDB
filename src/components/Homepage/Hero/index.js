@@ -9,8 +9,8 @@ import * as styles from './hero.module.scss'
 const Hero = () => {
     useEffect(() => {
         // for animation
-        gsap.fromTo(".marqueeLeft", {xPercent: "-100"}, {xPercent: "+=100", duration: 10, ease: "linear", repeat: -1}).totalProgress(0.5);
-        gsap.fromTo(".marqueeRight", {xPercent: "-100"}, {xPercent: "-=100", duration: 10, ease: "linear", repeat: -1}).totalProgress(0.5);
+        gsap.fromTo(".marqueeLeft", {xPercent: "-100"}, {xPercent: "-5", duration: 10, ease: "linear", repeat: 0}).totalProgress(0.5);
+        gsap.fromTo(".marqueeRight", {xPercent: "100"}, {xPercent: 0, duration: 10, ease: "linear", repeat: 0}).totalProgress(0.5);
         // for animation
     }, []);
 
@@ -33,18 +33,8 @@ const Hero = () => {
                 <div className={styles.marqueeContainer}>
                     <div className={styles.marqueeLeftInner}>
                         <p className={`marqueeLeft ${styles.marquee}`}>Charge</p>
-                        <p className={`marqueeLeft ${styles.marquee}`}>Charge</p>
-                        <p className={`marqueeLeft ${styles.marquee}`}>Charge</p>
-                        <p className={`marqueeLeft ${styles.marquee}`}>Charge</p>
-                        <p className={`marqueeLeft ${styles.marquee}`}>Charge</p>
-                        <p className={`marqueeLeft ${styles.marquee}`}>Charge</p>
                     </div>
                     <div className={styles.marqueeRightInner}>
-                        <p className={`marqueeRight ${styles.marquee}`}>Ahed</p>
-                        <p className={`marqueeRight ${styles.marquee}`}>Ahed</p>
-                        <p className={`marqueeRight ${styles.marquee}`}>Ahed</p>
-                        <p className={`marqueeRight ${styles.marquee}`}>Ahed</p>
-                        <p className={`marqueeRight ${styles.marquee}`}>Ahed</p>
                         <p className={`marqueeRight ${styles.marquee}`}>Ahed</p>
                     </div>
                 </div>
