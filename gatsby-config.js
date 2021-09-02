@@ -34,7 +34,7 @@ module.exports = {
           google: [
             {
               family: "Barlow",
-              variants: ["400", "500", "600", "700"],
+              variants: ["200", "300", "400", "500", "600", "700"],
             },
             {
               family: "Playfair Display:ital",

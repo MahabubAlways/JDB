@@ -1,0 +1,38 @@
+.future {
+  position: relative;
+  background: #1a1413;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+  h2 {
+    font-family: Playfair Display;
+    color: #fff;
+    font-style: italic;
+    font-size: 24em;
+    margin: 0;
+  }
+  .isGrowth {
+    position: absolute;
+    color: #666264;
+    font-family: Barlow;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0px;
+    bottom: 200px;
+    left: 43%;
+  }
+  .fearLess {
+    position: relative;
+    width: 260px;
+    color: #666264;
+    font-family: Barlow;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin: 0px;
+    left: 70%;
+  }
+}
