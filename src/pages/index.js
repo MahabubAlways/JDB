@@ -1,4 +1,5 @@
 import * as React from "react"
+import Clients from "../components/Homepage/Clients"
 import Future from "../components/Homepage/Future"
 import GetInTouch from "../components/Homepage/GetInTouch"
 import Hero from "../components/Homepage/Hero"
@@ -19,6 +20,7 @@ const IndexPage = (props) => {
       <Future />
       <Vision />
       <GetInTouch />
+      <Clients />
     </Layouts>
   )
 }

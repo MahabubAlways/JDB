@@ -1,0 +1,22 @@
+.footerbottom {
+  background: #000;
+  margin-top: 40px;
+  padding-block: 20px;
+  display: flex;
+  justify-content: center;
+  .Icons {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 10px;
+    .socialIcons {
+      width: 25px;
+      height: 25px;
+      color: #000;
+    }
+  }
+}

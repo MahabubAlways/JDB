@@ -1,0 +1,33 @@
+.clients {
+  background: #fff;
+  width: 84%;
+  margin: 0 auto;
+  h2 {
+    font-family: Barlow;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+  }
+  .client {
+    display: flex;
+    flex-wrap: wrap;
+    .logo {
+      width: 25%;
+      padding-block: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .image {
+        text-align: center;
+        picture {
+          text-align: center;
+        }
+        img {
+          object-fit: contain !important;
+          max-height: 200px;
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}
