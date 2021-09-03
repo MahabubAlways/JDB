@@ -6,6 +6,7 @@ const googleAnalytics = process.env.GATSBY_GOOGLE_ANALYTICS;
 
 module.exports = {
   siteMetadata: {
+    siteName: 'JDB 2M',
     title: `JDB 2M`,
     description: `JDB 2M`,
     author: `@Alex`,
@@ -24,7 +25,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.png",
       },
     },
     {
