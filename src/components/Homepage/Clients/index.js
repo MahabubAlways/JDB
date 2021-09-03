@@ -32,7 +32,7 @@ const Clients = () => {
                     <StaticImage className={styles.image} src="../../../images/clients/apex.jpg" alt="apex" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/cbn.png" alt="cbn" />
+                    <StaticImage className={styles.image} src="../../../images/clients/cbn.jpg" alt="cbn" />
                 </div>
                 <div className={styles.logo}>
                     <StaticImage className={styles.image} src="../../../images/clients/cmb.jpg" alt="cmb" />
