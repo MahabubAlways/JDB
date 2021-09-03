@@ -23,8 +23,8 @@ const Hero = () => {
 
     useEffect(() => {
         // for animation
-        gsap.fromTo(".marqueeLeft", {xPercent: "-100"}, {xPercent: "-3", duration: 1, ease: "linear", repeat: 0}).totalProgress(0.5);
-        gsap.fromTo(".marqueeRight", {xPercent: "100"}, {xPercent: 0, duration: 1, ease: "linear", repeat: 0}).totalProgress(0.5);
+        gsap.fromTo(".marqueeLeft", {xPercent: "-100"}, {delay: 5, xPercent: "-3", duration: 1, ease: "linear", repeat: 0}).totalProgress(0.5);
+        gsap.fromTo(".marqueeRight", {xPercent: "100"}, {delay: 5, xPercent: 0, duration: 1, ease: "linear", repeat: 0}).totalProgress(0.5);
         // for animation
     }, []);
 

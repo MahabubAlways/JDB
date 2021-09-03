@@ -1,5 +1,4 @@
 @import "include-media";
-
 .heroContainer {
   position: relative;
   display: flex;
@@ -83,6 +82,10 @@
     .marqueeContainer {
       position: relative;
       overflow: hidden;
+      padding-block: 40px;
+      @include media("<tablet") {
+        padding: 0;
+      }
       .marqueeLeftInner {
         display: flex;
         position: relative;
@@ -108,12 +111,12 @@
           font-family: Playfair Display;
           font-weight: 800;
           font-style: italic;
-          font-size: 350px;
+          font-size: 290px;
           margin-top: -60px;
           -webkit-text-stroke: 1px white;
           -webkit-text-fill-color: transparent;
           @include media("<tablet") {
-            font-size: 150px;
+            font-size: 130px;
             margin-top: 0;
             margin-bottom: 0;
           }
