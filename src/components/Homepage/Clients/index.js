@@ -17,16 +17,19 @@ const Clients = () => {
                     <StaticImage className={styles.image} src="../../../images/clients/pf-change.jpg" alt="pf-change" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/Pandora.jpg" alt="Pandora" />
+                    <StaticImage className={styles.image} src="../../../images/clients/paho.jpg" alt="paho" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/paho.jpg" alt="paho" />
+                    <StaticImage className={styles.image} src="../../../images/clients/Pandora.jpg" alt="Pandora" />
                 </div>
                 <div className={styles.logo}>
                     <StaticImage className={styles.image} src="../../../images/clients/departmento.jpg" alt="departmento" />
                 </div>
                 <div className={styles.logo}>
                     <StaticImage className={styles.image} src="../../../images/clients/cba.jpg" alt="cba" />
+                </div>
+                <div className={styles.logo}>
+                    <StaticImage className={styles.image} src="../../../images/clients/boolchands.jpg" alt="boolchands" />
                 </div>
                 <div className={styles.logo}>
                     <StaticImage className={styles.image} src="../../../images/clients/apex.jpg" alt="apex" />
@@ -39,9 +42,6 @@ const Clients = () => {
                 </div>
                 <div className={styles.logo}>
                     <StaticImage className={styles.image} src="../../../images/clients/gda.jpg" alt="gda" />
-                </div>
-                <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/boolchands.jpg" alt="boolchands" />
                 </div>
             </div>
         </div>
