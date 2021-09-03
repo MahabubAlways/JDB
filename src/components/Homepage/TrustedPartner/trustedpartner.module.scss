@@ -1,13 +1,23 @@
+@import "include-media";
 .TrustedPartner {
   display: flex;
+  @include media("<tablet") {
+    flex-direction: column;
+  }
   .Image {
     width: 50%;
+    @include media("<tablet") {
+      width: 100%;
+    }
   }
   .ContentContainer {
     width: 50%;
     background: #000;
+    @include media("<tablet") {
+      width: 100%;
+    }
     .Content {
-      padding: 15% 20% 0;
+      padding: 8% 8% 0;
       color: #fff;
       h2 {
         font-family: Barlow;
@@ -15,6 +25,9 @@
         font-size: 48px;
         font-weight: 400;
         margin-bottom: 20px;
+        @include media("<tablet") {
+          font-size: 28px;
+        }
       }
       p {
         font-family: Barlow;
@@ -35,6 +48,10 @@
       border-color: transparent;
       border-top-left-radius: 20px;
       border-bottom-right-radius: 20px;
+      @include media("<tablet") {
+        margin-left: 8%;
+        margin-block: 15px 40px;
+      }
     }
   }
 }

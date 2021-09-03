@@ -1,3 +1,5 @@
+@import "include-media";
+
 .heroContainer {
   position: relative;
   display: flex;
@@ -6,8 +8,16 @@
   align-items: center;
   overflow: hidden;
   z-index: 1;
+  @include media("<tablet") {
+    flex-direction: column;
+    margin-top: 0;
+    height: unset;
+  }
   .leftContent {
     width: 8%;
+    @include media("<tablet") {
+      display: none;
+    }
     .ChargeArrow {
       p {
         font-family: Barlow;
@@ -26,12 +36,20 @@
   .middleContent {
     width: 22%;
     padding-inline-end: 10%;
+    @include media("<tablet") {
+      width: 84%;
+      margin: 0 auto 40px;
+      padding: 0;
+    }
     h1 {
       font-family: Barlow;
       font-style: italic;
       font-weight: 500;
       font-size: 80px;
       margin-block: 15px;
+      @include media("<tablet") {
+        font-size: 60px;
+      }
     }
     p {
       font-family: Barlow;
@@ -58,6 +76,10 @@
     background-position: center center;
     position: relative;
     overflow: hidden;
+    @include media("<tablet") {
+      width: 100%;
+      height: unset;
+    }
     .marqueeContainer {
       position: relative;
       overflow: hidden;
@@ -73,6 +95,9 @@
           margin: 0;
           -webkit-text-stroke: 1px white;
           -webkit-text-fill-color: transparent;
+          @include media("<tablet") {
+            font-size: 120px;
+          }
         }
       }
       .marqueeRightInner {
@@ -87,6 +112,11 @@
           margin-top: -60px;
           -webkit-text-stroke: 1px white;
           -webkit-text-fill-color: transparent;
+          @include media("<tablet") {
+            font-size: 150px;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
         }
       }
     }

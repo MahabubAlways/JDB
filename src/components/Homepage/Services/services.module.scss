@@ -1,10 +1,17 @@
+@import "include-media";
 .services {
   display: flex;
+  @include media("<tablet") {
+    flex-direction: column;
+  }
   .service {
     position: relative;
     width: 33.333333%;
     display: flex;
     flex-direction: column;
+    @include media("<tablet") {
+      width: 100%;
+    }
     &:nth-child(1) {
       background: #3b3438;
     }

@@ -1,3 +1,4 @@
+@import "include-media";
 .GetInTouch {
   background: #f6f6f6;
   display: flex;
@@ -5,11 +6,17 @@
   align-items: center;
   padding-block: 60px;
   min-height: 400px;
+  @include media("<tablet") {
+    padding-block: 40px;
+  }
   h2 {
     font-family: Barlow;
     font-style: italic;
     font-weight: 400;
     font-size: 48px;
+    @include media("<tablet") {
+      font-size: 28px;
+    }
   }
   form {
     .inputContainer {
@@ -23,6 +30,10 @@
         padding: 12px 20px;
         width: 70px;
         display: inline-block;
+        @include media("<tablet") {
+          width: 55px;
+          padding: 12px 20px;
+        }
         &.textareaLabel {
           position: relative;
           top: -115px;
@@ -35,6 +46,9 @@
         padding: 0 6px;
         border: none;
         background: #fff;
+        @include media("<tablet") {
+          width: 210px;
+        }
       }
       .textarea {
         font-family: Barlow;
@@ -42,6 +56,9 @@
         padding: 8px 6px;
         border: none;
         background: #fff;
+        @include media("<tablet") {
+          width: 210px;
+        }
       }
     }
     button {
