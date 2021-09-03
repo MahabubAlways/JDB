@@ -1,5 +1,6 @@
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from "gatsby"
 import React from 'react'
 import * as styles from './services.module.scss'
 
@@ -12,9 +13,9 @@ const Services = () => {
                     <p>Services</p>
                 </div>
                 <div className={styles.btnContainer}>
-                    <span className={styles.btn}>
+                    <Link to="/" className={styles.btn}>
                         <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
-                    </span>
+                    </Link>
                 </div>
             </div>
             <div className={styles.service}>
@@ -23,9 +24,9 @@ const Services = () => {
                     <p>Services</p>
                 </div>
                 <div className={styles.btnContainer}>
-                    <span className={styles.btn}>
+                    <Link to="/" className={styles.btn}>
                         <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
-                    </span>
+                    </Link>
                 </div>
             </div>
             <div className={styles.service}>
@@ -34,9 +35,9 @@ const Services = () => {
                     <p>Services</p>
                 </div>
                 <div className={styles.btnContainer}>
-                    <span className={styles.btn}>
+                    <Link to="/" className={styles.btn}>
                         <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
-                    </span>
+                    </Link>
                 </div>
             </div>
         </div>
