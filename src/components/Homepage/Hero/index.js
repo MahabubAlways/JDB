@@ -35,7 +35,7 @@ const Hero = () => {
                         <p className={`marqueeLeft ${styles.marquee}`}>Charge</p>
                     </div>
                     <div className={styles.marqueeRightInner}>
-                        <p className={`marqueeRight ${styles.marquee}`}>Ahed</p>
+                        <p className={`marqueeRight ${styles.marquee}`}>Ahead</p>
                     </div>
                 </div>
             </div>
