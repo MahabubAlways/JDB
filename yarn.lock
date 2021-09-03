@@ -1043,6 +1043,18 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@charlietango/use-client-hydrated@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@charlietango/use-client-hydrated/-/use-client-hydrated-1.9.0.tgz#e348536f1a3a8fbd66f77e6ac97018a5f5e456dd"
+  integrity sha512-QLM2B+B9jTl9UGZ03IMHC6G7JZRCD71G8iWG92i2WUTnYylsYjccfECIxAR+KcCVU6te8w0DxcHx/n6cMNDbpA==
+
+"@charlietango/use-window-size@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@charlietango/use-window-size/-/use-window-size-1.6.0.tgz#da91c08c7447dd5def2fec0edf01a0403f17e6fc"
+  integrity sha512-fMMee8nk4D41i/DMhvprb8XbXhy4jsx8mlp13JOMuNSzyarGtAoakgs19YwAVPTd+oiGxYJd4lgXZJLE6LJr4g==
+  dependencies:
+    "@charlietango/use-client-hydrated" "^1.9.0"
+
 "@endemolshinegroup/cosmiconfig-typescript-loader@3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@endemolshinegroup/cosmiconfig-typescript-loader/-/cosmiconfig-typescript-loader-3.0.2.tgz#eea4635828dde372838b0909693ebd9aafeec22d"
@@ -6549,6 +6561,11 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
+
+include-media@^1.4.10:
+  version "1.4.10"
+  resolved "https://registry.yarnpkg.com/include-media/-/include-media-1.4.10.tgz#7a311c92c396c808504ec6a5365115d30571f259"
+  integrity sha512-TymQzKF7oWHbItEcEHOCponZ90lRr1I9QbYeD+qCxXy4Z0/pSpS4Ocz2bq3FMOERlXXrY9Sawsh9GjiObVQA6A==
 
 indent-string@^4.0.0:
   version "4.0.0"

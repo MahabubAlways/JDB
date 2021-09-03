@@ -1,15 +1,22 @@
+@import "include-media";
 .future {
   position: relative;
   background: #1a1413;
   display: flex;
   flex-direction: column;
   padding-bottom: 80px;
+  overflow: hidden;
   h2 {
     font-family: Playfair Display;
     color: #fff;
     font-style: italic;
     font-size: 24em;
     margin: 0;
+    @include media("<tablet") {
+      font-size: 100px;
+      padding-top: 25px;
+      padding-left: 15px;
+    }
   }
   .isGrowth {
     position: absolute;
@@ -22,6 +29,11 @@
     margin: 0px;
     bottom: 200px;
     left: 43%;
+    @include media("<tablet") {
+      font-size: 24px;
+      bottom: 140px;
+      left: 30%;
+    }
   }
   .fearLess {
     position: relative;
@@ -34,5 +46,11 @@
     text-transform: uppercase;
     margin: 0px;
     left: 70%;
+    @include media("<tablet") {
+      width: 200px;
+      font-size: 30px;
+      left: 45%;
+      top: 25px;
+    }
   }
 }
