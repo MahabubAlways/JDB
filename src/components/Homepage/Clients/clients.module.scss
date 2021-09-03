@@ -18,23 +18,12 @@
     .logo {
       width: 25%;
       padding-block: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       @include media("<tablet") {
         width: 30%;
         padding-inline: 1.5%;
       }
       .image {
-        text-align: center;
-        picture {
-          text-align: center;
-        }
-        img {
-          object-fit: contain !important;
-          max-height: 200px;
-          max-width: 250px;
-        }
+        margin: auto;
       }
     }
   }
