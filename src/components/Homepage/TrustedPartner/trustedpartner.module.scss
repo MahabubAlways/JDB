@@ -6,8 +6,10 @@
   }
   .Image {
     width: 50%;
+    min-height: 600px;
     @include media("<tablet") {
       width: 100%;
+      min-height: 350px;
     }
   }
   .ContentContainer {
@@ -51,6 +53,7 @@
       border-color: transparent;
       border-top-left-radius: 20px;
       border-bottom-right-radius: 20px;
+      margin-block-end: 40px;
       @include media("<tablet") {
         margin-left: 8%;
         margin-block: 15px 40px;

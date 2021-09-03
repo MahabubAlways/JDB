@@ -1,9 +1,23 @@
-import { Link } from 'gatsby'
-import { StaticImage } from "gatsby-plugin-image"
-import React from 'react'
-import * as styles from './vision.module.scss'
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
+import React from 'react';
+import * as styles from './vision.module.scss';
 
 const Vision = () => {
+
+    const { visionImage } = useStaticQuery(
+        graphql`
+            query {
+                visionImage: file(relativePath: { eq: "Our-Vision.jpg" }) {
+                    childImageSharp {
+                        gatsbyImageData
+                    }
+                }
+            }
+        `
+    );
+
     return (
         <div className={styles.vision}>
             <div className={styles.left}>
@@ -16,9 +30,7 @@ const Vision = () => {
                     <Link to="/" className={styles.btn}>SEE MORE</Link>
                 </div>
             </div>
-            <div className={styles.right}>
-                <StaticImage src="../../../images/Our-Vision.jpg" alt="Trusted Partner" />
-            </div>
+            <BgImage image={getImage(visionImage)} className={styles.right} />
         </div>
     )
 }

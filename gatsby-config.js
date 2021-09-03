@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const path = require(`path`)
 const siteUrl = process.env.GATSBY_SITE_URL;
 const siteGraphql = process.env.GATSBY_SITE_ADMIN_URL + "/graphql";
 const googleAnalytics = process.env.GATSBY_GOOGLE_ANALYTICS;
@@ -72,6 +72,13 @@ module.exports = {
     `gatsby-plugin-netlify`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
     `gatsby-plugin-offline`,
   ],
 };
