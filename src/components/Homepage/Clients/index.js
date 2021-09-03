@@ -8,40 +8,40 @@ const Clients = () => {
             <h2>Clients</h2>
             <div className={styles.client}>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/pizza-hut.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/pizza-hunt.jpg" alt="pizza-hut" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/Taco-Bell.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/tacobell.jpg" alt="tacobell" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/p.f.changs.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/pf-change.jpg" alt="pf-change" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/Pandora.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/Pandora.jpg" alt="Pandora" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/paho.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/paho.jpg" alt="paho" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/Departmento-di-impuesto.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/departmento.jpg" alt="departmento" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/centrale-bank-van-aruba.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/cba.jpg" alt="cba" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/apex.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/apex.jpg" alt="apex" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/canadian-bank-note.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/cbn.png" alt="cbn" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/cmb.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/cmb.jpg" alt="cmb" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/gobierno-di-aruba.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/gda.jpg" alt="gda" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/boolchands.png" alt="pizza-hut" />
+                    <StaticImage className={styles.image} src="../../../images/clients/boolchands.jpg" alt="boolchands" />
                 </div>
             </div>
         </div>
