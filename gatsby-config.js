@@ -10,18 +10,19 @@ module.exports = {
     title: `JDB 2M`,
     description: `JDB 2M`,
     author: `@Alex`,
-    siteUrl: siteUrl
+    siteUrl: siteUrl,
+    gSiteVerification: ''
   },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
-    // {
-    //   resolve: `gatsby-plugin-sitemap`,
-    //   options: {
-    //     output: `/sitemap.xml`,
-    //     sitemapSize: 5000
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/`,
+        entryLimit: 5000
+      }
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
