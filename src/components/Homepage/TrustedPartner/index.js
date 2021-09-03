@@ -14,7 +14,9 @@ const TrustedPartner = () => {
                     <h2>More than an agency, a trusted partner</h2>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
                 </div>
-                <Link to="/" className={styles.seeBtn}>See More</Link>
+                <div>
+                    <Link to="/" className={styles.seeBtn}>See More</Link>
+                </div>
             </div>
         </div>
     )

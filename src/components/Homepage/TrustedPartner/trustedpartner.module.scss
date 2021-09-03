@@ -13,11 +13,14 @@
   .ContentContainer {
     width: 50%;
     background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include media("<tablet") {
       width: 100%;
     }
     .Content {
-      padding: 8% 8% 0;
+      padding: 0 8%;
       color: #fff;
       h2 {
         font-family: Barlow;
@@ -39,7 +42,7 @@
       text-decoration: none;
       display: inline-block;
       margin-top: 15px;
-      margin-left: 20%;
+      margin-left: 8%;
       background: #fff;
       color: #e61d48;
       font-weight: 500;
