@@ -25,6 +25,7 @@
     box-sizing: border-box;
     @include media("<tablet") {
       width: 100%;
+      padding: 30px 30px 10px;
     }
     .Content {
       color: #fff;
@@ -58,7 +59,7 @@
       border-bottom-right-radius: 20px;
       margin-block-end: 40px;
       @include media("<tablet") {
-        margin-left: 8%;
+        margin-left: 0%;
         margin-block: 15px 40px;
       }
     }

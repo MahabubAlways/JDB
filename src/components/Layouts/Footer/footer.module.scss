@@ -30,12 +30,13 @@
       display: flex;
       @include media("<tablet") {
         width: 100%;
+        justify-content: space-between;
       }
       .footerMenu {
-        width: 33.333333%;
+        width: 31.333333%;
         h3 {
           font-family: Barlow;
-          margin-bottom: 30px;
+          margin-block: 20px 10px;
         }
         ul {
           margin: 0;

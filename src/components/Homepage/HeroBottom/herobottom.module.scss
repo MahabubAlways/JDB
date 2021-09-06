@@ -12,7 +12,7 @@
   @include media("<tablet") {
     flex-direction: column;
     height: unset;
-    padding-block: 30px;
+    padding-block: 0 40px;
   }
   .bannerTitle{
     flex: 0 0 33.33%;
@@ -34,6 +34,9 @@
           font-size: 20px;
           font-style: italic;
       }
+      @include media("<tablet") {
+        text-align: center;
+      }
   }
   .socialLinks, .left {
     width: 33.333333%;
@@ -48,6 +51,7 @@
       justify-content: center;
       @include media("<tablet") {
         justify-content: center;
+        margin-block: 15px;
       }
       li {
         margin-right: 20px;
@@ -66,7 +70,7 @@
     width: 33.333333%;
     @include media("<tablet") {
       width: 100%;
-      margin-top: 30px;
+      margin-top: 0px;
     }
     ul {
       margin: 0;

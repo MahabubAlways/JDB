@@ -15,7 +15,8 @@
     font-weight: 400;
     font-size: 48px;
     @include media("<tablet") {
-      font-size: 28px;
+      font-size: 34px;
+      margin-bottom: 10px;
     }
   }
   form {
@@ -43,7 +44,7 @@
         font-family: Barlow;
         width: 400px;
         height: 43px;
-        padding: 0 6px;
+        padding: 0 15px;
         border: none;
         background: #fff;
         @include media("<tablet") {
@@ -53,7 +54,7 @@
       .textarea {
         font-family: Barlow;
         width: 400px;
-        padding: 8px 6px;
+        padding: 8px 15px;
         border: none;
         background: #fff;
         @include media("<tablet") {

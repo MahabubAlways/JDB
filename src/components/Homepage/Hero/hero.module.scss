@@ -36,9 +36,13 @@
     width: 22%;
     padding-inline-end: 10%;
     @include media("<tablet") {
-      width: 84%;
+      order: 1;
       margin: 0 auto 40px;
       padding: 0;
+      width: 100%;
+      padding: 10px 20px 40px;
+      box-sizing: border-box;
+      background: #f6f6f6;
     }
     h1 {
       font-family: Barlow;
@@ -47,7 +51,7 @@
       font-size: 80px;
       margin-block: 15px;
       @include media("<tablet") {
-        font-size: 60px;
+        font-size: 48px;
       }
     }
     p {
@@ -79,6 +83,7 @@
     @include media("<tablet") {
       width: 100%;
       height: unset;
+      padding: 30px 0;
     }
     .marqueeContainer {
       position: relative;

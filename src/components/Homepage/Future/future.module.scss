@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 40px 0 100px;
+  padding: 40px 0 90px;
   overflow: hidden;
   background: #0C050D;
   h2 {
@@ -13,9 +13,8 @@
     font-size: 24em;
     margin: 0;
     @include media("<tablet") {
-      font-size: 100px;
-      padding-top: 25px;
-      padding-left: 15px;
+      font-size: 98px;
+      padding-left: 10px;
     }
   }
   .isGrowth {
@@ -30,8 +29,9 @@
     bottom: 200px;
     left: 43%;
     @include media("<tablet") {
-      font-size: 24px;
-      bottom: 140px;
+      font-size: 30px;
+      top: 10px;
+      position: relative;
       left: 30%;
     }
   }
