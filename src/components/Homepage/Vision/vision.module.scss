@@ -57,8 +57,10 @@
   }
   .right {
     width: 50%;
+    min-height: 600px;
     @include media("<tablet") {
       width: 100%;
+      min-height: 350px;
     }
   }
 }

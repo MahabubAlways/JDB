@@ -1,14 +1,25 @@
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import React from 'react'
-import * as styles from './trustedpartner.module.scss'
+import { graphql, Link, useStaticQuery } from "gatsby";
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
+import React from 'react';
+import * as styles from './trustedpartner.module.scss';
 
 const TrustedPartner = () => {
+    const { partnerImage } = useStaticQuery(
+        graphql`
+            query {
+                partnerImage: file(relativePath: { eq: "Trusted-Partner.jpg" }) {
+                    childImageSharp {
+                        gatsbyImageData
+                    }
+                }
+            }
+        `
+    );
+
     return (
         <div className={styles.TrustedPartner}>
-            <div className={styles.Image}>
-                <StaticImage src="../../../images/Trusted-Partner.jpg" alt="Trusted Partner" />
-            </div>
+            <BgImage image={getImage(partnerImage)} className={styles.Image} />
             <div className={styles.ContentContainer}>
                 <div className={styles.Content}>
                     <h2>More than an agency, a trusted partner</h2>
