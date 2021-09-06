@@ -27,8 +27,8 @@ const Hero = () => {
 
     useEffect(() => {
         // for animation
-        gsap.fromTo(".marqueeLeft", {xPercent: "-100"}, {delay: 5, xPercent: "-3", duration: 1, ease: "linear", repeat: 0}).totalProgress(0.5);
-        gsap.fromTo(".marqueeRight", {xPercent: "100"}, {delay: 5, xPercent: 0, duration: 1, ease: "linear", repeat: 0}).totalProgress(0.5);
+        gsap.fromTo(".marqueeLeft", {xPercent: "-100"}, {delay: 5, xPercent: "0", yPercent: "-1", duration: 1, ease: "linear", repeat: 0}).totalProgress(0.5);
+        gsap.fromTo(".marqueeRight", {xPercent: "100"}, {delay: 5, xPercent: "0", yPercent: "0", duration: 1, ease: "linear", repeat: 0}).totalProgress(0.5);
         // for animation
     }, []);
 
@@ -44,7 +44,7 @@ const Hero = () => {
             <div className={styles.middleContent}>
                 <h1>Charge Ahead!</h1>
                 <p>The best agency for your brand. Come to see all services for you.</p>
-                <Link to="/" className={`btn ${styles.HeroBtn}`}>SEE MORE</Link>
+                <Link to="/" className={styles.HeroBtn}>SEE MORE</Link>
             </div>
             <BackgroundImage fluid={homeBanner} className={styles.rightContent}>
                 <div className={styles.marqueeContainer}>

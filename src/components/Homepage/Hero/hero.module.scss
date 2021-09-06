@@ -91,11 +91,13 @@
         display: flex;
         position: relative;
         overflow: hidden;
+        justify-content: center;
         .marquee {
           font-family: Playfair Display;
           font-weight: 800;
           font-style: italic;
-          font-size: 265px;
+          font-size: 290px;
+          line-height: 1.2;
           margin: 0;
           -webkit-text-stroke: 1px white;
           -webkit-text-fill-color: transparent;
@@ -108,12 +110,14 @@
         display: flex;
         position: relative;
         overflow: hidden;
+        justify-content: center;
         .marquee {
           font-family: Playfair Display;
           font-weight: 800;
           font-style: italic;
-          font-size: 280px;
+          font-size: 290px;
           margin-top: -60px;
+          line-height: 1.2;
           -webkit-text-stroke: 1px white;
           -webkit-text-fill-color: transparent;
           @include media("<tablet") {
