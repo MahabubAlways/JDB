@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require(`path`)
 
 const siteUrl = process.env.GATSBY_SITE_URL;
 const siteGraphql = process.env.GATSBY_SITE_ADMIN_URL + "/graphql";
@@ -45,6 +46,13 @@ module.exports = {
           ]
         }
       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
     },
     {
       resolve: "gatsby-source-wordpress",

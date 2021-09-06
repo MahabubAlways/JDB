@@ -6,20 +6,24 @@ import { BgImage } from 'gbimage-bridge'
 import { gsap } from 'gsap'
 import React, { useEffect } from 'react'
 import * as styles from './hero.module.scss'
+import BackgroundImage from 'gatsby-background-image'
 
 const Hero = () => {
 
-    const { heroImage } = useStaticQuery(
+    const heroImageBanner = useStaticQuery(
         graphql`
             query {
                 heroImage: file(relativePath: { eq: "Charge-Ahead.jpg" }) {
                     childImageSharp {
-                        gatsbyImageData
+                        fluid(quality: 90) {
+                          ...GatsbyImageSharpFluid
+                        }
                     }
                 }
             }
         `
     );
+    const homeBanner = heroImageBanner.heroImage.childImageSharp.fluid;
 
     useEffect(() => {
         // for animation
@@ -33,7 +37,6 @@ const Hero = () => {
             <div className={styles.leftContent}>
                 <div className={styles.ChargeArrow}>
                     <p>CHARGE AHEAD
-
                     <FontAwesomeIcon className={styles.ChargeArrowDown} icon={faArrowDown} />
                     </p>
                 </div>
@@ -43,7 +46,7 @@ const Hero = () => {
                 <p>The best agency for your brand. Come to see all services for you.</p>
                 <Link to="/" className={styles.HeroBtn}>SEE MORE</Link>
             </div>
-            <BgImage image={getImage(heroImage)} className={styles.rightContent}>
+            <BackgroundImage fluid={homeBanner} className={styles.rightContent}>
                 <div className={styles.marqueeContainer}>
                     <div className={styles.marqueeLeftInner}>
                         <p className={`marqueeLeft ${styles.marquee}`}>Charge</p>
@@ -52,7 +55,7 @@ const Hero = () => {
                         <p className={`marqueeRight ${styles.marquee}`}>Ahead</p>
                     </div>
                 </div>
-            </BgImage>
+            </BackgroundImage>
         </div>
     )
 }
