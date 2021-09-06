@@ -44,7 +44,7 @@ const Hero = () => {
             <div className={styles.middleContent}>
                 <h1>Charge Ahead!</h1>
                 <p>The best agency for your brand. Come to see all services for you.</p>
-                <Link to="/" className={styles.HeroBtn}>SEE MORE</Link>
+                <Link to="/" className={`btn ${styles.HeroBtn}`}>SEE MORE</Link>
             </div>
             <BackgroundImage fluid={homeBanner} className={styles.rightContent}>
                 <div className={styles.marqueeContainer}>

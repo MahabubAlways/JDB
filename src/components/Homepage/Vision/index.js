@@ -7,7 +7,7 @@ import BackgroundImage from 'gatsby-background-image'
 
 const Vision = () => {
 
-    const { visionImage } = useStaticQuery(
+    const visionBanner = useStaticQuery(
         graphql`
             query {
                 visionImage: file(relativePath: { eq: "Our-Vision.jpg" }) {
@@ -20,10 +20,10 @@ const Vision = () => {
             }
         `
     );
-
+    const visionBg = visionBanner.visionImage.childImageSharp.fluid;
     return (
         <div className={styles.vision}>
-            <BackgroundImage fluid={visionImage}>
+            <BackgroundImage fluid={visionBg}>
                 <div className={styles.left}>
                     <div className={styles.content}>
                         <h2>Our Vision</h2>

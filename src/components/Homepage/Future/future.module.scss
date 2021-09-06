@@ -1,12 +1,19 @@
 @import "include-media";
 .future {
   position: relative;
-  background: #1a1413;
   display: flex;
   flex-direction: column;
   padding-bottom: 80px;
   overflow: hidden;
-  h2 {
+  background: #e61348;
+  background: -moz-linear-gradient(-45deg, #e61348 0%, #e0a810 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #e61348), color-stop(100%, #e0a810));
+  background: -webkit-linear-gradient(-45deg, #e61348 0%, #e0a810 100%);
+  background: -o-linear-gradient(-45deg, #e61348 0%, #e0a810 100%);
+  background: -ms-linear-gradient(-45deg, #e61348 0%, #e0a810 100%);
+  background: linear-gradient(135deg, #e61348 0%, #e0a810 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e61348', endColorstr='#e0a810', GradientType=1 );
+h2 {
     font-family: Playfair Display;
     color: #fff;
     font-style: italic;
@@ -20,7 +27,7 @@
   }
   .isGrowth {
     position: absolute;
-    color: #666264;
+    color: #fff;
     font-family: Barlow;
     font-weight: 200;
     font-style: italic;
@@ -38,7 +45,7 @@
   .fearLess {
     position: relative;
     width: 260px;
-    color: #666264;
+    color: #fff;
     font-family: Barlow;
     font-weight: 200;
     font-style: italic;

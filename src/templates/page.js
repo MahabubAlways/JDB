@@ -20,8 +20,8 @@ const Page = ({data}) => {
         <HeroBottom />
         <TrustedPartner />
         <Services />
-        <Future />
         <Vision />
+        <Future />
         <GetInTouch />
         <Clients />
     </Layouts>
