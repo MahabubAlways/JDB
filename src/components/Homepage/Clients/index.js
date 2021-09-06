@@ -20,7 +20,7 @@ const Clients = () => {
                     <StaticImage className={styles.image} src="../../../images/clients/paho.jpg" alt="paho" />
                 </div>
                 <div className={styles.logo}>
-                    <StaticImage className={styles.image} src="../../../images/clients/Pandora.jpg" alt="Pandora" />
+                    <StaticImage className={styles.image} src="../../../images/clients/pandora.jpg" alt="Pandora" />
                 </div>
                 <div className={styles.logo}>
                     <StaticImage className={styles.image} src="../../../images/clients/departmento.jpg" alt="departmento" />
