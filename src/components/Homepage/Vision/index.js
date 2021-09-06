@@ -31,7 +31,7 @@ const Vision = () => {
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
                     </div>
                     <div className={styles.btnContainer}>
-                        <Link to="/" className={styles.btn}>SEE MORE</Link>
+                        <Link to="/" className={`btn ${styles.btn}`}>SEE MORE</Link>
                     </div>
                 </div>
             </BackgroundImage>
