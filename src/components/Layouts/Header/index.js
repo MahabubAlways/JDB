@@ -42,7 +42,7 @@ const Header = ({path}) => {
                         <FontAwesomeIcon icon={faTimes} />
                     </button>
                     <ul>
-                        <li><Link to="/">SERVICES</Link></li>
+                        <li><Link to="/services">SERVICES</Link></li>
                         <li><Link to="/">OUR WORK</Link></li>
                         <li><Link to="/">ABOUT US</Link></li>
                     </ul>
