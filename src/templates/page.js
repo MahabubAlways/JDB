@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Clients from '../components/Homepage/Clients'
+import ClientSlider from '../components/Homepage/ClientSlider'
 import Future from '../components/Homepage/Future'
 import GetInTouch from '../components/Homepage/GetInTouch'
 import Hero from '../components/Homepage/Hero'
@@ -23,7 +23,7 @@ const Page = ({data}) => {
         <Future />
         <Vision />
         <GetInTouch />
-        <Clients />
+        <ClientSlider />
     </Layouts>
   )
 }

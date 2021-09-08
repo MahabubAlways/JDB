@@ -8,7 +8,27 @@ const Services = () => {
   const Images = useStaticQuery(
     graphql`
         query {
-            partnerImage: file(relativePath: { eq: "Trusted-Partner.jpg" }) {
+            IntegratedBusinessDevelopment: file(relativePath: { eq: "Integrated-Business-Development.jpg" }) {
+                childImageSharp {
+                    gatsbyImageData
+                }
+            }
+            GrowthStrategies: file(relativePath: { eq: "Growth-Strategies.jpg" }) {
+                childImageSharp {
+                    gatsbyImageData
+                }
+            }
+            BrandDevelopment: file(relativePath: { eq: "Brand-Development.jpg" }) {
+                childImageSharp {
+                    gatsbyImageData
+                }
+            }
+            ReputationManagement: file(relativePath: { eq: "Reputation-Management.jpg" }) {
+                childImageSharp {
+                    gatsbyImageData
+                }
+            }
+            CrisisManagement: file(relativePath: { eq: "Crisis-Management.jpg" }) {
                 childImageSharp {
                     gatsbyImageData
                 }
@@ -21,35 +41,35 @@ const Services = () => {
     {
       title: 'Integrated Business Development',
       content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.',
-      image: Images.partnerImage,
+      image: Images.IntegratedBusinessDevelopment,
       BGBlack: false,
       ImgLeft: false
     },
     {
       title: 'Growth  Strategies',
       content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.',
-      image: Images.partnerImage,
+      image: Images.GrowthStrategies,
       BGBlack: true,
       ImgLeft: true
     },
     {
       title: 'Brand Development',
       content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.',
-      image: Images.partnerImage,
+      image: Images.BrandDevelopment,
       BGBlack: false,
       ImgLeft: false
     },
     {
       title: 'Reputation Management',
       content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.',
-      image: Images.partnerImage,
+      image: Images.ReputationManagement,
       BGBlack: true,
       ImgLeft: true
     },
     {
       title: 'Crisis Management',
       content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.',
-      image: Images.partnerImage,
+      image: Images.CrisisManagement,
       BGBlack: false,
       ImgLeft: false
     },

@@ -1,0 +1,36 @@
+@import "include-media";
+.ClientSlider {
+  background: #fff;
+  width: 84%;
+  margin: 50px auto;
+  h2 {
+    font-family: Barlow;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    @include media("<tablet") {
+      font-size: 28px;
+    }
+  }
+  .client {
+    margin-block-start: 40px;
+    position: relative;
+    :global(.react-multi-carousel-list) {
+      position: unset;
+      :global(.react-multiple-carousel__arrow--left) {
+        left: unset;
+        right: calc(4% + 15px);
+      }
+      :global(.react-multiple-carousel__arrow--right) {
+        right: 0;
+      }
+      :global(.react-multiple-carousel__arrow) {
+        top: -60px;
+        background: rgb(255, 255, 255);
+      }
+      :global(.react-multiple-carousel__arrow::before) {
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+}
