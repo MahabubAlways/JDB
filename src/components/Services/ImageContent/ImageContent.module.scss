@@ -1,0 +1,85 @@
+@import "include-media";
+.ImageContent {
+  display: flex;
+  flex-flow: row wrap;
+  &.ImgLeft {
+    flex-direction: row-reverse;
+    @include media("<tablet") {
+      flex-direction: column-reverse;
+    }
+  }
+  @include media("<tablet") {
+    flex-direction: column-reverse;
+  }
+  .ContentContainer {
+    width: 50%;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    box-sizing: border-box;
+    @include media("<tablet") {
+      width: 100%;
+      padding: 30px 30px 10px;
+    }
+    .Content {
+      color: #000;
+      h2 {
+        font-family: Playfair Display;
+        font-style: italic;
+        font-size: 48px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        @include media("<tablet") {
+          font-size: 28px;
+        }
+      }
+      p {
+        font-family: Barlow;
+        font-size: 16px;
+      }
+    }
+    .seeBtn {
+      font-family: Barlow;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      background: #000;
+      color: #e61d48;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 10px 25px;
+      border-color: transparent;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-block-end: 40px;
+      @include media("<tablet") {
+        margin-left: 0%;
+        margin-block: 15px 40px;
+      }
+    }
+    &.black {
+      background: #0c050d;
+      .Content {
+        color: #fff;
+      }
+      .seeBtn {
+        background: #fff;
+      }
+    }
+  }
+  .ImageContainer {
+    width: 50%;
+    flex: 0 0 50%;
+    .Image {
+      width: 100%;
+      img {
+        object-fit: fill !important;
+      }
+    }
+    @include media("<tablet") {
+      width: 100%;
+    }
+  }
+}

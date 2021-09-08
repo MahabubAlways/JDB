@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import React from 'react'
 import * as styles from './services.module.scss'
 
-const Services = () => {
+const HomeServices = () => {
     return (
         <div className={styles.services}>
             <div className={styles.service}>
@@ -44,4 +44,4 @@ const Services = () => {
     )
 }
 
-export default Services
+export default HomeServices
