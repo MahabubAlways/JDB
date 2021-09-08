@@ -1,0 +1,116 @@
+@import "include-media";
+.CaseStudies {
+  width: 84%;
+  margin: 0 auto;
+  margin-block: 40px 60px;
+  display: flex;
+  @include media("<tablet") {
+    margin-block: 0px 40px;
+    flex-direction: column;
+  }
+  .sectionContent {
+    width: 50%;
+    @include media("<tablet") {
+      width: 100%;
+    }
+    h2 {
+      font-family: Playfair Display;
+      font-size: 48px;
+      font-style: italic;
+      font-weight: 500;
+      width: 200px;
+      @include media("<tablet") {
+        font-size: 28px;
+        width: 100%;
+      }
+    }
+    p {
+      font-family: Barlow;
+      padding-inline-end: 50px;
+      padding-block-start: 20px;
+      @include media("<tablet") {
+        width: 100%;
+      }
+    }
+    .SeeBtn {
+      display: inline-block;
+      text-decoration: none;
+      background: #000;
+      color: #fec707;
+      font-family: Barlow;
+      font-weight: 600;
+      padding: 12px 36px 15px;
+      margin-top: 20px;
+    }
+  }
+  .oneCase {
+    width: 50%;
+    @include media("<tablet") {
+      width: 100%;
+      margin-top: 40px;
+    }
+    .Image {
+      position: relative;
+      width: 80%;
+      margin-left: auto;
+      min-height: 300px;
+      @include media("<tablet") {
+        width: 100% !important;
+        min-height: 300px !important;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .category {
+        background: #fec707;
+        display: inline-block;
+        text-decoration: none;
+        color: #2b2732;
+        font-family: Barlow;
+        font-weight: 600;
+        padding: 12px 36px 15px;
+        margin: 20px;
+      }
+      .btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fec707;
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        .faChevronRight {
+          color: #2b2732;
+          font-size: 20px;
+        }
+      }
+    }
+    &.twoCase {
+      display: flex;
+      align-items: flex-end;
+      @include media("<tablet") {
+        margin-top: 0;
+      }
+      .Image {
+        width: 90%;
+        min-height: 350px;
+        margin-left: unset;
+      }
+    }
+    &.threeCase {
+      .Image {
+        width: 100%;
+        min-height: 400px;
+        margin-left: unset;
+      }
+    }
+  }
+}
