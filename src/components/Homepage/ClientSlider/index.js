@@ -1,10 +1,26 @@
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from 'react';
 import Carousel from "react-multi-carousel";
 import * as styles from './ClientSlider.module.scss';
 
+export const fragment = graphql`
+  fragment ClientSlider on WpPage_Postfields_Sections_HomeClients {
+    fieldGroupName
+    clients {
+      image {
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`;
 
-const ClientSlider = () => {
+const ClientSlider = ({data}) => {
     const responsive = {
         desktop: {
           breakpoint: { max: 3000, min: 1025 },
@@ -32,42 +48,11 @@ const ClientSlider = () => {
                 itemClass="image-item"
                 responsive={responsive}
             >
-                <div>
-                    <StaticImage src="../../../images/clients/pizza-hunt.jpg" alt="pizza-hut" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/tacobell.jpg" alt="tacobell" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/pf-change.jpg" alt="pf-change" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/paho.jpg" alt="paho" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/pandora.jpg" alt="Pandora" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/departmento.jpg" alt="departmento" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/cba.jpg" alt="cba" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/boolchands.jpg" alt="boolchands" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/apex.jpg" alt="apex" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/cbn.jpg" alt="cbn" />
-                </div>
-                <div>
-                    <StaticImage src="../../../images/clients/cmb.jpg" alt="cmb" />
-                </div>
-                <div >
-                    <StaticImage src="../../../images/clients/gda.jpg" alt="gda" />
-                </div>
+            {
+                data.clients.map((logo, index) => {
+                    return <GatsbyImage key={index} image={getImage(logo.image.localFile)} alt={logo.image.altText} />
+                })
+            }
             </Carousel>
             </div>
         </div>

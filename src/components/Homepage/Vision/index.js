@@ -4,7 +4,24 @@ import { BgImage } from 'gbimage-bridge';
 import React from 'react';
 import * as styles from './vision.module.scss';
 
-const Vision = () => {
+export const fragment = graphql`
+  fragment Vision on WpPage_Postfields_Sections_HomeVision {
+    buttonLabel
+    buttonUrl
+    content
+    fieldGroupName
+    image {
+      altText
+      localFile {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+`;
+
+const Vision = ({data}) => {
 
     const { visionImage } = useStaticQuery(
         graphql`
@@ -17,20 +34,17 @@ const Vision = () => {
             }
         `
     );
+    const {content, image, buttonLabel, buttonUrl} = data
 
     return (
         <div className={styles.vision}>
             <div className={styles.left}>
-                <div className={styles.content}>
-                    <h2>Our Vision</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                </div>
+                <div className={styles.content} dangerouslySetInnerHTML={{ __html: content }} />
                 <div className={styles.btnContainer}>
-                    <Link to="/" className={styles.btn}>SEE MORE</Link>
+                    <Link to={buttonUrl} className={styles.btn}>{buttonLabel}</Link>
                 </div>
             </div>
-            <BgImage image={getImage(visionImage)} className={styles.right} />
+            <BgImage image={getImage(image.localFile)} className={styles.right} />
         </div>
     )
 }

@@ -5,7 +5,7 @@
   flex-direction: column;
   padding: 40px 0 90px;
   overflow: hidden;
-  background: #0C050D;
+  background: #0c050d;
   h2 {
     font-family: Playfair Display;
     color: #fff;
@@ -17,40 +17,42 @@
       padding-left: 10px;
     }
   }
-  .isGrowth {
-    position: absolute;
-    color: #656466;
-    font-family: Barlow;
-    font-weight: 200;
-    font-style: italic;
-    font-size: 60px;
-    text-transform: uppercase;
-    margin: 0px;
-    bottom: 200px;
-    left: 43%;
-    @include media("<tablet") {
-      font-size: 30px;
-      top: 10px;
-      position: relative;
-      left: 30%;
+  p {
+    &:nth-child(2) {
+      position: absolute;
+      color: #656466;
+      font-family: Barlow;
+      font-weight: 200;
+      font-style: italic;
+      font-size: 60px;
+      text-transform: uppercase;
+      margin: 0px;
+      bottom: 200px;
+      left: 43%;
+      @include media("<tablet") {
+        font-size: 30px;
+        top: 10px;
+        position: relative;
+        left: 30%;
+      }
     }
-  }
-  .fearLess {
-    position: relative;
-    width: 260px;
-    color: #656466;
-    font-family: Barlow;
-    font-weight: 200;
-    font-style: italic;
-    font-size: 45px;
-    text-transform: uppercase;
-    margin: 0px;
-    left: 70%;
-    @include media("<tablet") {
-      width: 200px;
-      font-size: 30px;
-      left: 45%;
-      top: 25px;
+    &:nth-child(3) {
+      position: relative;
+      width: 260px;
+      color: #656466;
+      font-family: Barlow;
+      font-weight: 200;
+      font-style: italic;
+      font-size: 45px;
+      text-transform: uppercase;
+      margin: 0px;
+      left: 70%;
+      @include media("<tablet") {
+        width: 200px;
+        font-size: 30px;
+        left: 45%;
+        top: 25px;
+      }
     }
   }
 }

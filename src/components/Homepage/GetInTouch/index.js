@@ -1,8 +1,15 @@
-import { navigate } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import React, { useState } from 'react';
 import * as styles from './GetInTouch.module.scss';
 
-const GetInTouch = () => {
+export const fragment = graphql`
+  fragment GetInTouch on WpPage_Postfields_Sections_HomeContact {
+    fieldGroupName
+    title
+  }
+`;
+
+const GetInTouch = ({data}) => {
         const [state, setState] = useState({});
         const [message, setMessage] = useState('');
         const [status, setStatus] = useState(false);
@@ -35,7 +42,7 @@ const GetInTouch = () => {
         
         return (
             <div id="contactForm" className={styles.GetInTouch}>
-                <h2>Get in touch</h2>
+                <h2>{data.title}</h2>
                 <form  method="POST" name="contact" data-netlify="true" onSubmit={handleSubmit}>
                     <input type="hidden" name="form-name" value="contact" />
                     <div className={styles.inputContainer}>

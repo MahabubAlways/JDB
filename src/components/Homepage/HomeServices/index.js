@@ -1,45 +1,39 @@
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from 'react'
 import * as styles from './services.module.scss'
 
-const HomeServices = () => {
+export const fragment = graphql`
+  fragment HomeServices on WpPage_Postfields_Sections_HomeServices {
+    fieldGroupName
+    services {
+      content
+      url
+    }
+  }
+`;
+
+const HomeServices = ({data}) => {
+    const {services} = data
+
     return (
         <div className={styles.services}>
-            <div className={styles.service}>
-                <div className={styles.content}>
-                    <h2>Growth</h2>
-                    <p>Services</p>
-                </div>
-                <div className={styles.btnContainer}>
-                    <Link to="/" className={styles.btn}>
-                        <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
-                    </Link>
-                </div>
-            </div>
-            <div className={styles.service}>
-                <div className={styles.content}>
-                    <h2>Marketing & Creative</h2>
-                    <p>Services</p>
-                </div>
-                <div className={styles.btnContainer}>
-                    <Link to="/" className={styles.btn}>
-                        <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
-                    </Link>
-                </div>
-            </div>
-            <div className={styles.service}>
-                <div className={styles.content}>
-                    <h2>Development</h2>
-                    <p>Services</p>
-                </div>
-                <div className={styles.btnContainer}>
-                    <Link to="/" className={styles.btn}>
-                        <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
-                    </Link>
-                </div>
-            </div>
+            {
+                services.map((item, index) => {
+                    return(
+                        <div key={index} className={styles.service}>
+                            <div className={styles.content} dangerouslySetInnerHTML={{ __html: item.content }} />
+                            <div className={styles.btnContainer}>
+                                <Link to={item.url} className={styles.btn}>
+                                    <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
+                                </Link>
+                            </div>
+                        </div>
+                    )
+                })
+            }
+
         </div>
     )
 }
