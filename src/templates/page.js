@@ -1,18 +1,19 @@
-import { graphql } from 'gatsby'
-import React from 'react'
-import { ClientSlider, Future, GetInTouch, Hero, HeroBottom, HomeServices, TrustedPartner, Vision } from '../components/Homepage'
-import Layouts from '../components/Layouts'
+import { graphql } from 'gatsby';
+import React from 'react';
+import { CaseStudies, GrowthHero, ImageContent } from "../components/Growth";
+import { ClientSlider, Future, GetInTouch, Hero, HeroBottom, HomeServices, TrustedPartner, Vision } from '../components/Homepage';
+import Layouts from '../components/Layouts';
 
 const Page = ({data}) => {
   const { seo } = data.wpPage
   const sections = data.wpPage.PostFields.sections;
 
-  console.log('Sections', sections)
+  //console.log('Sections', sections)
 
   return (
     <Layouts path={data.wpPage.uri} title={seo.title} description={seo?.metaDesc}>
 
-        {sections.map((section, index) => {
+        {sections?.map((section, index) => {
           const typeName = section.fieldGroupName;
           
           switch (typeName) {
@@ -40,11 +41,19 @@ const Page = ({data}) => {
             case 'page_Postfields_Sections_HomeClients':
               return <ClientSlider key={index} data={section} />;
 
+            case 'page_Postfields_Sections_GrowthHero':
+              return <GrowthHero key={index} data={section} />;
+
+            case 'page_Postfields_Sections_GrowthImageContent':
+              return <ImageContent key={index} data={section} />;
+
+            case 'page_Postfields_Sections_GrowthCaseStudies':
+              return <CaseStudies key={index} data={section} />;
+
             default:
               return null;
           }
         })}
-
     </Layouts>
   )
 }
@@ -68,6 +77,9 @@ export const query = graphql`
           ...Vision
           ...GetInTouch
           ...ClientSlider
+          ...GrowthHero
+          ...ImageContent
+          ...CaseStudies
         }
       }
     }
