@@ -51,6 +51,7 @@
       width: 30%;
       padding-left: 20px;
       padding-top: 20px;
+      text-align: left;
       @include media("<tablet") {
         width: 95%;
         padding-left: 5%;
