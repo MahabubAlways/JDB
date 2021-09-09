@@ -76,7 +76,7 @@ const Services = () => {
     },
   ]
   return (
-    <Layouts path={"/services"} title={"Services"} description={""}>
+    <Layouts path={"/growth"} title={"Growth"} description={""}>
         <ServicesHero />
         {
           ContentForServices.map((item, index) => {
