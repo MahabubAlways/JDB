@@ -58,16 +58,6 @@
         width: 100% !important;
         min-height: 300px !important;
       }
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background: #000;
-        opacity: 0.75;
-      }
       .category {
         background: #fec707;
         display: inline-block;

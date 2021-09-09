@@ -4,6 +4,10 @@
   height: calc(100vh - 95px);
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @include media("<tablet") {
     height: unset;
     padding-block: 30px;
@@ -12,7 +16,7 @@
     font-family: Playfair Display;
     color: #fff;
     font-style: italic;
-    font-size: 25.5em;
+    font-size: calc(12vw + 12vh);
     @include media("<tablet") {
       font-size: 6em;
       padding-left: 20px;

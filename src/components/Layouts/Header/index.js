@@ -17,6 +17,7 @@ const Header = ({path}) => {
             <div className={`${styles.navbar} ${path === '/' ? styles.homeNav : ''}`}>
                 <ul>
                     <li><Link to="/growth">GROWTH</Link></li>
+                    <li><Link to="/marketing">MARKETING</Link></li>
                     <li><Link to="/">OUR WORK</Link></li>
                     <li><Link to="/">ABOUT US</Link></li>
                 </ul>
@@ -43,6 +44,7 @@ const Header = ({path}) => {
                     </button>
                     <ul>
                         <li><Link to="/growth">GROWTH</Link></li>
+                        <li><Link to="/marketing">MARKETING</Link></li>
                         <li><Link to="/">OUR WORK</Link></li>
                         <li><Link to="/">ABOUT US</Link></li>
                     </ul>
