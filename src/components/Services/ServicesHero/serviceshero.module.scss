@@ -3,9 +3,10 @@
   background: #000;
   height: calc(100vh - 95px);
   overflow: hidden;
+  text-align: center;
   @include media("<tablet") {
-  height: unset;
-  padding-block: 30px;
+    height: unset;
+    padding-block: 30px;
   }
   h1 {
     font-family: Playfair Display;
@@ -13,8 +14,8 @@
     font-style: italic;
     font-size: 25.5em;
     @include media("<tablet") {
-    font-size: 6em;
-    padding-left: 20px;
+      font-size: 6em;
+      padding-left: 20px;
     }
   }
   .herobottom {
@@ -22,17 +23,17 @@
     justify-content: stretch;
     margin-top: -50px;
     @include media("<tablet") {
-    margin-top: 0;
-    justify-content: center;
-    flex-direction: column;
+      margin-top: 0;
+      justify-content: center;
+      flex-direction: column;
     }
     .left {
       width: 45%;
       text-align: right;
       padding-right: 20px;
       @include media("<tablet") {
-      width: 100%;
-      text-align: center;
+        width: 100%;
+        text-align: center;
       }
       h2 {
         color: #666264;
@@ -42,7 +43,7 @@
         font-size: 4.5em;
         text-transform: uppercase;
         @include media("<tablet") {
-        font-size: 1.5em;
+          font-size: 1.5em;
         }
       }
     }
