@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React from "react";
 import * as styles from './GrowthHero.module.scss';
 
 export const fragment = graphql`
@@ -14,8 +14,8 @@ export const fragment = graphql`
 const GrowthHero = ({data}) => {
 
     return (
-        <div id="Container" className={styles.GrowthHero}>
-            <h1 id="Heading">{data.title}</h1>
+        <div className={styles.GrowthHero}>
+            <div dangerouslySetInnerHTML={{ __html: data.title }} />
             <div className={styles.herobottom}>
                 <div className={styles.left}>
                     <h2>{data.subTitle}</h2>

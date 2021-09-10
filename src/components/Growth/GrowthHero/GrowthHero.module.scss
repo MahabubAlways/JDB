@@ -16,10 +16,9 @@
     font-family: Playfair Display;
     color: #fff;
     font-style: italic;
-    font-size: 120px;
-    white-space: nowrap;
+    //font-size: 25.5em;
     @include media("<tablet") {
-      font-size: 6em;
+      font-size: 4em;
     }
   }
   .herobottom {
