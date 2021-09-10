@@ -41,6 +41,8 @@ const Page = ({data}) => {
             case 'page_Postfields_Sections_HomeClients':
               return <ClientSlider key={index} data={section} />;
 
+            // Services Inner Page
+
             case 'page_Postfields_Sections_GrowthHero':
               return <GrowthHero key={index} data={section} />;
 
@@ -49,6 +51,9 @@ const Page = ({data}) => {
 
             case 'page_Postfields_Sections_GrowthCaseStudies':
               return <CaseStudies key={index} data={section} />;
+
+            // Services Inner Page
+            
 
             default:
               return null;

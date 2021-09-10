@@ -18,6 +18,7 @@ const Header = ({path}) => {
                 <ul>
                     <li><Link to="/growth">GROWTH</Link></li>
                     <li><Link to="/marketing">MARKETING</Link></li>
+                    <li><Link to="/design-creative">Design & Creative</Link></li>
                     <li><Link to="/">OUR WORK</Link></li>
                     <li><Link to="/">ABOUT US</Link></li>
                 </ul>
@@ -45,6 +46,7 @@ const Header = ({path}) => {
                     <ul>
                         <li><Link to="/growth">GROWTH</Link></li>
                         <li><Link to="/marketing">MARKETING</Link></li>
+                        <li><Link to="/design-creative">Design & Creative</Link></li>
                         <li><Link to="/">OUR WORK</Link></li>
                         <li><Link to="/">ABOUT US</Link></li>
                     </ul>
@@ -58,7 +60,7 @@ const Header = ({path}) => {
             <div className={styles.headerContainer}>
                 <div className={styles.logo}>
                     <Link aria-label="logo" to="/">
-                        <img src="/images/JDB-Logo-Black.png" alt="Logo" />
+                        <img width={120} height={43} src="/images/JDB-Logo-Black.png" alt="Logo" />
                     </Link>
                 </div>
                 {(width > 768 ? <Desktop /> : <Mobile />)}

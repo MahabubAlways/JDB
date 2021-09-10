@@ -16,16 +16,15 @@
     font-family: Playfair Display;
     color: #fff;
     font-style: italic;
-    font-size: calc(12vw + 12vh);
+    font-size: 100px;
+    white-space: nowrap;
     @include media("<tablet") {
       font-size: 6em;
-      padding-left: 20px;
     }
   }
   .herobottom {
     display: flex;
     justify-content: stretch;
-    margin-top: -50px;
     @include media("<tablet") {
       margin-top: 0;
       justify-content: center;

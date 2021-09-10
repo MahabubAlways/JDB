@@ -12,9 +12,11 @@ export const fragment = graphql`
 `;
 
 const GrowthHero = ({data}) => {
+
     return (
-        <div className={styles.GrowthHero}>
-            <h1>{data.title}</h1>
+        <div id="Container" className={styles.GrowthHero}>
+            <h1 id="Heading">{data.title}</h1>
+            <button>+</button>
             <div className={styles.herobottom}>
                 <div className={styles.left}>
                     <h2>{data.subTitle}</h2>

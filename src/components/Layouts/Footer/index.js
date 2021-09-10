@@ -9,7 +9,7 @@ const Footer = () => {
             <div className={styles.container}>
                 <div className={styles.left}>
                     <Link aria-label="logo" to="/" className={styles.footerLogo}>
-                        <img src="/images/JDB-Logo-Black.png" alt="Logo" />
+                        <img width={120} height={43} src="/images/JDB-Logo-Black.png" alt="Logo" />
                     </Link>
                     <p>We are a agency global in different parts of the world. <br />Our team is working from Toronto, Bogotá & Dutch Caribbean.</p>
 
