@@ -19,6 +19,7 @@ const Header = ({path}) => {
                     <li><Link to="/growth">GROWTH</Link></li>
                     <li><Link to="/marketing">MARKETING</Link></li>
                     <li><Link to="/design-creative">Design & Creative</Link></li>
+                    <li><Link to="/development">Development</Link></li>
                     <li><Link to="/">OUR WORK</Link></li>
                     <li><Link to="/">ABOUT US</Link></li>
                 </ul>
@@ -47,6 +48,7 @@ const Header = ({path}) => {
                         <li><Link to="/growth">GROWTH</Link></li>
                         <li><Link to="/marketing">MARKETING</Link></li>
                         <li><Link to="/design-creative">Design & Creative</Link></li>
+                        <li><Link to="/development">Development</Link></li>
                         <li><Link to="/">OUR WORK</Link></li>
                         <li><Link to="/">ABOUT US</Link></li>
                     </ul>
