@@ -1,24 +1,5 @@
 @import "include-media";
-.GetInTouch {
-  background: #f1f1f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-block: 60px;
-  min-height: 400px;
-  @include media("<tablet") {
-    padding-block: 40px;
-  }
-  h2 {
-    font-family: Barlow;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 48px;
-    @include media("<tablet") {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-  }
+.GlobalContactForm {
   form {
     .inputContainer {
       margin-block: 10px;
@@ -71,6 +52,33 @@
       color: #fec707;
       padding: 12px 30px;
       float: right;
+    }
+    &.border {
+      .inputContainer {
+        .inputLabel {
+          &.textareaLabel {
+            position: relative;
+            top: -118px;
+          }
+        }
+        .input {
+          width: 400px;
+          height: 43px;
+          padding: 0 15px;
+          border: 1px solid #f1f1f1;
+          background: #fff;
+          @include media("<tablet") {
+            width: 210px;
+          }
+        }
+        .textarea {
+          padding: 8px 15px;
+          border: 1px solid #f1f1f1;
+          @include media("<tablet") {
+            width: 210px;
+          }
+        }
+      }
     }
   }
 }

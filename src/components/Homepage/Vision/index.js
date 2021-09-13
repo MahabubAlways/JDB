@@ -1,4 +1,4 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
 import React from 'react';
@@ -22,18 +22,6 @@ export const fragment = graphql`
 `;
 
 const Vision = ({data}) => {
-
-    const { visionImage } = useStaticQuery(
-        graphql`
-            query {
-                visionImage: file(relativePath: { eq: "Our-Vision.jpg" }) {
-                    childImageSharp {
-                        gatsbyImageData
-                    }
-                }
-            }
-        `
-    );
     const {content, image, buttonLabel, buttonUrl} = data
 
     return (

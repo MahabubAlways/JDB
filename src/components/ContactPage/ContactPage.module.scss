@@ -1,0 +1,53 @@
+@import "include-media";
+.ContactPage {
+  width: 84%;
+  margin: 60px auto;
+  display: flex;
+  .left {
+    width: 50%;
+    h1 {
+      font-family: Barlow;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 48px;
+    }
+    .contact {
+      margin-top: 30px;
+      p {
+        font-family: Barlow;
+        color: #000;
+        a {
+          color: #000;
+        }
+      }
+    }
+    .socialIcons {
+      padding-block: 20px;
+      display: flex;
+      .Icons {
+        width: 40px;
+        height: 40px;
+        background: #000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline-end: 10px;
+        .socialIcons {
+          width: 25px;
+          height: 25px;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .right {
+    width: 50%;
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
+}

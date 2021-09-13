@@ -22,6 +22,7 @@ const Header = ({path}) => {
                     <li><Link to="/development">Development</Link></li>
                     <li><Link to="/">OUR WORK</Link></li>
                     <li><Link to="/">ABOUT US</Link></li>
+                    <li><Link to="/contact-us">Contact Us</Link></li>
                 </ul>
                 <button className={styles.navButton}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.25 31.71"><g data-name="Layer 2"><g data-name="Capa 1"><rect width="66.25" height="8.92" /><rect x="27.71" y="22.8" width="38.54" height="8.92" /></g></g></svg>
@@ -51,6 +52,7 @@ const Header = ({path}) => {
                         <li><Link to="/development">Development</Link></li>
                         <li><Link to="/">OUR WORK</Link></li>
                         <li><Link to="/">ABOUT US</Link></li>
+                        <li><Link to="/contact-us">Contact Us</Link></li>
                     </ul>
                 </div>
             </div>
