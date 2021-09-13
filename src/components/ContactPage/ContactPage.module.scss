@@ -3,13 +3,23 @@
   width: 84%;
   margin: 60px auto;
   display: flex;
+  @include media("<tablet") {
+    flex-direction: column;
+    margin: 40px auto;
+  }
   .left {
     width: 50%;
+    @include media("<tablet") {
+      width: 100%;
+    }
     h1 {
       font-family: Barlow;
       font-style: italic;
       font-weight: 500;
       font-size: 48px;
+      @include media("<tablet") {
+        font-size: 38px;
+      }
     }
     .contact {
       margin-top: 30px;
@@ -43,11 +53,20 @@
   }
   .right {
     width: 50%;
+    @include media("<tablet") {
+      width: 100%;
+    }
     form {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;
+      @include media("<tablet") {
+        display: block;
+        flex-direction: unset;
+        justify-content: unset;
+        align-items: unset;
+      }
     }
   }
 }

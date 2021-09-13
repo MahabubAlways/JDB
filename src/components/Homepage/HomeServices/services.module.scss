@@ -26,6 +26,9 @@
     }
     .content {
       text-align: center;
+      @include media("<tablet") {
+        padding-inline: 10px;
+      }
       h2 {
         font-family: "Playfair Display";
         font-style: italic;

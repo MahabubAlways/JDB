@@ -31,6 +31,9 @@
         @include media("<tablet") {
           width: 210px;
         }
+        @media only screen and (max-width: 374px) {
+          width: 161px;
+        }
       }
       .textarea {
         font-family: Barlow;
@@ -40,6 +43,9 @@
         background: #fff;
         @include media("<tablet") {
           width: 210px;
+        }
+        @media only screen and (max-width: 374px) {
+          width: 161px;
         }
       }
     }
@@ -66,16 +72,21 @@
           height: 43px;
           padding: 0 15px;
           border: 1px solid #f1f1f1;
-          background: #fff;
           @include media("<tablet") {
-            width: 210px;
+            width: 188px;
+          }
+          @media only screen and (max-width: 374px) {
+            width: 141px;
           }
         }
         .textarea {
           padding: 8px 15px;
           border: 1px solid #f1f1f1;
           @include media("<tablet") {
-            width: 210px;
+            width: 188px;
+          }
+          @media only screen and (max-width: 374px) {
+            width: 141px;
           }
         }
       }
