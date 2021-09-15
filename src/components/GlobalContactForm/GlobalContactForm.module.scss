@@ -3,6 +3,17 @@
   form {
     .inputContainer {
       margin-block: 10px;
+      &.inputNone {
+        display: none !important;
+      }
+      &.PhninputContainer {
+        display: flex;
+        :global(.PhoneInputInput) {
+          border: none;
+          outline: none;
+          color: #6a6e76;
+        }
+      }
       .inputLabel {
         position: relative;
         top: 2px;
@@ -28,11 +39,28 @@
         padding: 0 15px;
         border: none;
         background: #fff;
+        outline: none;
+        &.fullWidthInput {
+          width: calc(100% - 30px) !important;
+        }
         @include media("<tablet") {
           width: 210px;
         }
         @media only screen and (max-width: 374px) {
           width: 161px;
+        }
+      }
+      .inputSelect {
+        width: 430px !important;
+        color: #6a6e76;
+        &.fullWidthInput {
+          width: 100% !important;
+        }
+        @include media("<tablet") {
+          width: 240px;
+        }
+        @media only screen and (max-width: 374px) {
+          width: 191px;
         }
       }
       .textarea {
@@ -41,6 +69,10 @@
         padding: 8px 15px;
         border: none;
         background: #fff;
+        outline: none;
+        &.fullWidthInput {
+          width: calc(100% - 30px) !important;
+        }
         @include media("<tablet") {
           width: 210px;
         }

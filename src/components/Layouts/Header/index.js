@@ -1,8 +1,10 @@
 import useWindowSize from '@charlietango/use-window-size';
+import { faFacebookF, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faSortDown, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "gatsby";
 import React, { useState } from 'react';
+import GlobalContactForm from '../../GlobalContactForm';
 import * as styles from './header.module.scss';
 
 //{(width > 768 ? <TabItem /> : null)}
@@ -17,16 +19,21 @@ const Header = ({path}) => {
     const ServiceMenu = () => {
         return(
             <div className={`${styles.ServiceMenu} ${Service ? styles.active : ''}`}>
-                <h3>Services</h3>
-                <ul className={styles.dropdown}>
-                    <li><Link to="/growth">GROWTH</Link></li>
-                    <li><Link to="/marketing">MARKETING</Link></li>
-                    <li><Link to="/design-creative">Design & Creative</Link></li>
-                    <li><Link to="/development">Development</Link></li>
-                </ul>
+                <h3>Get in touch</h3>
+                <GlobalContactForm border={true} label={false} fullWidthInput={true} ServiceField={true} BudgetField={true} />
                 <button className={styles.crossBtn} onClick={toggleService}>
                         <FontAwesomeIcon icon={faTimes} />
                 </button>
+                <div className={styles.contact}>
+                    <p>Phone: <a href="tel:002211334455">0022 1133 4455</a></p>
+                    <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+                    <p>Address: 886 Sheppard Ave, Toronto, Canada</p>
+                </div>
+                <div className={styles.socialIcons}>
+                    <span className={styles.Icons}><FontAwesomeIcon className={styles.sclIcons} icon={faLinkedinIn} /></span>
+                    <span className={styles.Icons}><FontAwesomeIcon className={styles.sclIcons} icon={faInstagram} /></span>
+                    <span className={styles.Icons}><FontAwesomeIcon className={styles.sclIcons} icon={faFacebookF} /></span>
+                </div>
             </div>
         )
     }

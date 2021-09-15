@@ -16,7 +16,9 @@
     font-family: Playfair Display;
     color: #fff;
     font-style: italic;
-    //font-size: 25.5em;
+    word-wrap: break-word;
+    font-size: 220px;
+    line-height: 1;
     @include media("<tablet") {
       font-size: 4em;
     }

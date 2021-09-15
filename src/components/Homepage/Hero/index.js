@@ -47,7 +47,7 @@ const Hero = ({data}) => {
             </div>
             <div className={styles.middleContent}>
                 <div dangerouslySetInnerHTML={{ __html: content }} />
-                <Link to={buttonUrl} className={styles.HeroBtn}>{buttonLabel}</Link>
+                <Link to={buttonUrl} className={`btnBlack ${styles.HeroBtn}`}>{buttonLabel}</Link>
             </div>
             <BgImage image={getImage(image.localFile)} className={styles.rightContent}>
                 <div className={styles.marqueeContainer}>
