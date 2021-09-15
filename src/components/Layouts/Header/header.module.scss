@@ -31,14 +31,13 @@
       width: 100vw;
       left: -100vw;
       top: 0;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
-      opacity: 0;
-      transition: all 1s ease;
       &.active {
-        opacity: 1;
+        display: flex;
         left: 0;
+        animation: fadeInTop 0.4s ease;
       }
       .logo {
         position: absolute;
@@ -52,9 +51,6 @@
         top: 30px;
         right: 20px;
         font-size: 25px;
-        &:hover {
-          right: 30px;
-        }
       }
       ul {
         list-style: none;
@@ -77,19 +73,49 @@
   .navbar {
     width: 70%;
     display: flex;
-    ul {
+    .menuMain {
+      position: relative;
       font-family: Barlow;
       font-weight: 500;
       list-style: none;
       display: flex;
       justify-content: flex-end;
       width: 90%;
+      padding: 0;
       li {
         padding-inline: 16px;
+        padding-block: 16px;
         a {
+          position: relative;
           text-decoration: none;
           color: #000;
           text-transform: uppercase;
+        }
+        &.dropMenu {
+          position: relative;
+          ul {
+            position: absolute;
+            background: #fff;
+            color: #000;
+            display: none;
+            min-width: 175px;
+            list-style: none;
+            padding: 0;
+            top: 100%;
+            li {
+              padding-block: 10px;
+              a {
+                color: #000;
+              }
+            }
+          }
+          &:hover {
+            > .dropdown {
+              display: block;
+              animation: fadeInDown 0.4s ease;
+              -webkit-animation: fadeInDown 0.4s ease;
+            }
+          }
         }
       }
     }
@@ -118,5 +144,79 @@
         width: 40px;
       }
     }
+  }
+}
+.ServiceMenu {
+  position: fixed;
+  display: none;
+  text-align: center;
+  height: 100vh;
+  background: #fff;
+  width: 300px;
+  padding: 50px 20px;
+  top: 0;
+  right: 0;
+  z-index: 999999;
+  &.active {
+    display: block;
+    animation: fadeInRight 0.4s ease;
+  }
+  h3 {
+    font-family: Barlow;
+    font-size: 24px;
+  }
+  ul {
+    list-style: none;
+    margin-top: 25px;
+    padding: 0;
+    li {
+      padding-block: 10px;
+      a {
+        font-family: Barlow;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #000;
+      }
+    }
+  }
+  .crossBtn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 25px;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
