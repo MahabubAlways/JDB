@@ -20,7 +20,7 @@ const Header = ({path}) => {
         return(
             <div className={`${styles.ServiceMenu} ${Service ? styles.active : ''}`}>
                 <h3>Get in touch</h3>
-                <GlobalContactForm border={true} label={false} fullWidthInput={true} ServiceField={true} BudgetField={true} />
+                <GlobalContactForm border={true} label={false} fullWidthInput={true} ServiceField={true} BudgetField={true} btnClass={'btnBlack'} />
                 <button className={styles.crossBtn} onClick={toggleService}>
                         <FontAwesomeIcon icon={faTimes} />
                 </button>

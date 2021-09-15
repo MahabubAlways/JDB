@@ -1,0 +1,102 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  font-family: Barlow;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 15px;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  font-style: italic;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.btnBlack,
+.btnWhite,
+.btnBlackRound,
+.btnWhiteRound {
+  transition: all 0.5s;
+  position: relative;
+}
+.btnBlack::before,
+.btnWhite::before,
+.btnBlackRound::before,
+.btnWhiteRound::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.btnBlack::before,
+.btnBlackRound::before {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.btnWhite::before,
+.btnWhiteRound::before {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btnBlackRound::before,
+.btnWhiteRound::before,
+.btnBlackRound::after,
+.btnWhiteRound::after {
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.btnBlack:hover,
+.btnWhite:hover,
+.btnBlackRound:hover,
+.btnWhiteRound:hover {
+  background: transparent !important;
+}
+.btnBlack:hover::before,
+.btnWhite:hover::before,
+.btnBlackRound:hover::before,
+.btnWhiteRound:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.btnBlack::after,
+.btnWhite::after,
+.btnBlackRound::after,
+.btnWhiteRound::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: scale(1.2, 1.2);
+}
+.btnBlack::after,
+.btnBlackRound::after {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.btnWhite::after,
+.btnWhiteRound::after {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.btnBlack:hover::after,
+.btnWhite:hover::after,
+.btnBlackRound:hover::after,
+.btnWhiteRound:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}

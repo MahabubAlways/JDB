@@ -25,7 +25,7 @@ const HomeServices = ({data}) => {
                         <div key={index} className={styles.service}>
                             <div className={styles.content} dangerouslySetInnerHTML={{ __html: item.content }} />
                             <div className={styles.btnContainer}>
-                                <Link to={item.url} className={styles.btn}>
+                                <Link to={item.url} className={`btnWhite ${styles.btn}`}>
                                     <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
                                 </Link>
                             </div>

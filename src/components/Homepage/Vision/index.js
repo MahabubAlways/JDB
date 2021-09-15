@@ -29,7 +29,7 @@ const Vision = ({data}) => {
             <div className={styles.left}>
                 <div className={styles.content} dangerouslySetInnerHTML={{ __html: content }} />
                 <div className={styles.btnContainer}>
-                    <Link to={buttonUrl} className={styles.btn}>{buttonLabel}</Link>
+                    <Link to={buttonUrl} className={`btnWhite ${styles.btn}`}>{buttonLabel}</Link>
                 </div>
             </div>
             <BgImage image={getImage(image.localFile)} className={styles.right} />

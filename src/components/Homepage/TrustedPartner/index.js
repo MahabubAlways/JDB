@@ -31,7 +31,7 @@ const TrustedPartner = ({data}) => {
             <div className={styles.ContentContainer}>
                 <div className={styles.Content} dangerouslySetInnerHTML={{ __html: content }} />
                 <div>
-                    <Link to={buttonUrl} className={styles.seeBtn}>{buttonLabel}</Link>
+                    <Link to={buttonUrl} className={`btnWhiteRound ${styles.seeBtn}`}>{buttonLabel}</Link>
                 </div>
             </div>
         </div>

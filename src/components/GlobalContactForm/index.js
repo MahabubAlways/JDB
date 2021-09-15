@@ -1,10 +1,9 @@
 import { navigate } from "gatsby";
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
 import * as styles from './GlobalContactForm.module.scss';
 
-const GlobalContactForm = ({border, label, fullWidthInput, BudgetField, ServiceField}) => {
+const GlobalContactForm = ({border, label, fullWidthInput, BudgetField, ServiceField, btnClass}) => {
     const [state, setState] = useState({});
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState(false);
@@ -95,7 +94,7 @@ const GlobalContactForm = ({border, label, fullWidthInput, BudgetField, ServiceF
                         {message}
                     </div>
                 }
-                <button type="submit">
+                <button type="submit" className={btnClass}>
                     Send
                 </button>
             </form>

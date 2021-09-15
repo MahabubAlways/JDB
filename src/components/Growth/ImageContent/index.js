@@ -32,7 +32,7 @@ const ImageContent = ({data}) => {
                 <div className={styles.ContentContainer}>
                     <div className={styles.Content} dangerouslySetInnerHTML={{ __html: item?.content }} />
                     <div>
-                        <Link to={item?.buttonUrl} className={styles.seeBtn}>{item?.buttonLabel}</Link>
+                        <Link to={item?.buttonUrl} className={`${index % 2 === 0 ? 'btnBlackRound' : 'btnWhiteRound'} ${styles.seeBtn}`}>{item?.buttonLabel}</Link>
                     </div>
                 </div>
                 <div className={styles.ImageContainer}>

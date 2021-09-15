@@ -34,7 +34,7 @@ const CaseStudies = ({data}) => {
             <div className={styles.CaseStudies}>
                 <div className={styles.sectionContent}>
                     <div dangerouslySetInnerHTML={{ __html: data?.content }} />
-                    <Link className={styles.SeeBtn} to={data?.buttonUrl}>{data?.buttonLabel}</Link>
+                    <Link className={`btnBlack ${styles.SeeBtn}`} to={data?.buttonUrl}>{data?.buttonLabel}</Link>
                 </div>
                 <div className={styles.oneCase}>
                     <BgImage image={getImage(data.cases[0].image.localFile)} className={styles.Image}>
