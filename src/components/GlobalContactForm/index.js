@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import * as styles from './GlobalContactForm.module.scss';
 
-const GlobalContactForm = ({border, label, fullWidthInput, BudgetField, ServiceField, btnClass}) => {
+const GlobalContactForm = ({border, label, fullWidthInput, BudgetField, ServiceField}) => {
     const [state, setState] = useState({});
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState(false);
@@ -94,7 +94,7 @@ const GlobalContactForm = ({border, label, fullWidthInput, BudgetField, ServiceF
                         {message}
                     </div>
                 }
-                <button type="submit" className={btnClass}>
+                <button type="submit" className="btnBlack">
                     Send
                 </button>
             </form>

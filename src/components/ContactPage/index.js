@@ -21,7 +21,7 @@ const ContactPage = () => {
                 </div>
             </div>
             <div className={styles.right}>
-                <GlobalContactForm border={true} label={true} btnClass={'btnBlack'} />
+                <GlobalContactForm border={true} label={true} />
             </div>
         </div>
     )

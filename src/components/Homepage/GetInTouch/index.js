@@ -14,7 +14,7 @@ const GetInTouch = ({data}) => {
         return (
             <div id="contactForm" className={styles.GetInTouch}>
                 <h2>{data.title}</h2>
-                <GlobalContactForm label={true} btnClass={'btnBlack'} />
+                <GlobalContactForm label={true} />
             </div>
         )
 }

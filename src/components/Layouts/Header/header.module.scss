@@ -161,6 +161,9 @@
     display: block;
     animation: fadeInRight 0.4s ease;
   }
+  textarea {
+    height: 90px !important;
+  }
   h3 {
     font-family: Barlow;
     font-size: 24px;
