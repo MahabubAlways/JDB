@@ -24,79 +24,15 @@ a {
 
 .btnBlack,
 .btnWhite,
-.btnBlackRound,
-.btnWhiteRound {
-  transition: all 0.5s;
-  position: relative;
+.btnYellow {
+  transition: all ease 0.3s;
 }
-.btnBlack::before,
-.btnWhite::before,
-.btnBlackRound::before,
-.btnWhiteRound::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.3s;
+.btnBlack:hover {
+  background: #3e2c41 !important;
 }
-.btnBlack::before,
-.btnBlackRound::before {
-  background-color: rgba(0, 0, 0, 0.1);
+.btnWhite:hover {
+  background: #c8c6c6 !important;
 }
-.btnWhite::before,
-.btnWhiteRound::before {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.btnBlackRound::before,
-.btnWhiteRound::before,
-.btnBlackRound::after,
-.btnWhiteRound::after {
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.btnBlack:hover,
-.btnWhite:hover,
-.btnBlackRound:hover,
-.btnWhiteRound:hover {
-  background: transparent !important;
-}
-.btnBlack:hover::before,
-.btnWhite:hover::before,
-.btnBlackRound:hover::before,
-.btnWhiteRound:hover::before {
-  opacity: 0;
-  transform: scale(0.5, 0.5);
-}
-.btnBlack::after,
-.btnWhite::after,
-.btnBlackRound::after,
-.btnWhiteRound::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.3s;
-  transform: scale(1.2, 1.2);
-}
-.btnBlack::after,
-.btnBlackRound::after {
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-.btnWhite::after,
-.btnWhiteRound::after {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.btnBlack:hover::after,
-.btnWhite:hover::after,
-.btnBlackRound:hover::after,
-.btnWhiteRound:hover::after {
-  opacity: 1;
-  transform: scale(1, 1);
+.btnYellow:hover {
+  background: #ffb344 !important;
 }

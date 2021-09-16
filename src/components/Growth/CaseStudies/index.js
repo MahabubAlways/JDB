@@ -39,7 +39,7 @@ const CaseStudies = ({data}) => {
                 <div className={styles.oneCase}>
                     <BgImage image={getImage(data.cases[0].image.localFile)} className={styles.Image}>
                         <Link className={styles.category} to="/" >{data.cases[0].category}</Link>
-                        <Link to={data.cases[0].caseUrl} className={styles.btn}>
+                        <Link to={data.cases[0].caseUrl} className={`btnYellow ${styles.btn}`}>
                             <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
                         </Link>
                     </BgImage>
@@ -49,7 +49,7 @@ const CaseStudies = ({data}) => {
                 <div className={`${styles.oneCase} ${styles.twoCase}`}>
                     <BgImage image={getImage(data.cases[1].image.localFile)} className={styles.Image}>
                         <Link className={styles.category} to="/" >{data.cases[1].category}</Link>
-                        <Link to={data.cases[1].caseUrl} className={styles.btn}>
+                        <Link to={data.cases[1].caseUrl} className={`btnYellow ${styles.btn}`}>
                             <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
                         </Link>
                     </BgImage>
@@ -57,7 +57,7 @@ const CaseStudies = ({data}) => {
                 <div className={`${styles.oneCase} ${styles.threeCase}`}>
                     <BgImage image={getImage(data.cases[2].image.localFile)} className={styles.Image}>
                         <Link className={styles.category} to="/" >{data.cases[2].category}</Link>
-                        <Link to={data.cases[2].caseUrl} className={styles.btn}>
+                        <Link to={data.cases[2].caseUrl} className={`btnYellow ${styles.btn}`}>
                             <FontAwesomeIcon className={styles.faChevronRight} icon={faChevronRight} />
                         </Link>
                     </BgImage>
