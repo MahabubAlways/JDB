@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import * as styles from './GlobalContactForm.module.scss';
 
-const GlobalContactForm = ({border, label, fullWidthInput, BudgetField, ServiceField}) => {
+const GlobalContactForm = ({border, label, fullWidthInput, PhoneField, BudgetField, ServiceField}) => {
     const [state, setState] = useState({});
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState(false);
@@ -44,7 +44,7 @@ const GlobalContactForm = ({border, label, fullWidthInput, BudgetField, ServiceF
                     <input className={`${styles.input} ${fullWidthInput? styles.fullWidthInput : ''}`}  onBlur={handleChange} type="text" name="name" id="name" placeholder={fullWidthInput? 'Name' : ''} required />
                 </div>
 
-                <div className={`${styles.inputContainer} ${styles.PhninputContainer}`}>
+                <div className={`${styles.inputContainer} ${styles.PhninputContainer} ${!PhoneField ? styles.inputNone : ''}`}>
                     {label ? <label className={styles.inputLabel} htmlFor="Phone">Phone</label> : ''}
                     <PhoneInput
                         className={`${styles.input} ${fullWidthInput? styles.fullWidthInput : ''}`}
@@ -55,7 +55,7 @@ const GlobalContactForm = ({border, label, fullWidthInput, BudgetField, ServiceF
                         onChange={setNumValue}
                         placeholder={fullWidthInput? 'Phone' : ''}
                         name="Phone"
-                        required={true}
+                        required={PhoneField ? true : false}
                     />
                 </div>
 
