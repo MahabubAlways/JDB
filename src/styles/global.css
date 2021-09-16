@@ -28,11 +28,11 @@ a {
   transition: all ease 0.3s;
 }
 .btnBlack:hover {
-  background: #3e2c41 !important;
+  background: #e61d48 !important;
 }
 .btnWhite:hover {
-  background: #c8c6c6 !important;
+  background: #fec707 !important;
 }
 .btnYellow:hover {
-  background: #ffb344 !important;
+  background: #fff !important;
 }

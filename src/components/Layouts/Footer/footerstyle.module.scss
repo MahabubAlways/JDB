@@ -1,15 +1,15 @@
 @import "include-media";
-.footer {
-  background: #F1F1F2;
+.footerMain {
+  background: #f1f1f2;
   padding: 70px 0 0;
-  .container {
+  .footerContainer {
     width: 84%;
     margin: 0 auto;
     display: flex;
     @include media("<tablet") {
       flex-direction: column;
     }
-    .left {
+    .footerLeft {
       width: 45%;
       padding-right: 20px;
       @include media("<tablet") {
@@ -25,7 +25,7 @@
         line-height: 1.5em;
       }
     }
-    .right {
+    .footerRight {
       width: 55%;
       display: flex;
       @include media("<tablet") {

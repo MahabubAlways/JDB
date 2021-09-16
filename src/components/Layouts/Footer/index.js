@@ -1,13 +1,13 @@
 import { Link } from "gatsby";
 import React from 'react';
-import * as styles from './footer.module.scss';
 import FooterBottom from "./FooterBottom";
+import * as styles from './footerstyle.module.scss';
 
 const Footer = () => {
     return (
-        <footer className={styles.footer}>
-            <div className={styles.container}>
-                <div className={styles.left}>
+        <div className={styles.footerMain}>
+            <div className={styles.footerContainer}>
+                <div className={styles.footerLeft}>
                     <Link aria-label="logo" to="/" className={styles.footerLogo}>
                         <img width={120} height={43} src="/images/JDB-Logo-Black.png" alt="Logo" />
                     </Link>
@@ -15,7 +15,7 @@ const Footer = () => {
 
                     <p>Copyright 2021 - 2025. JDB Agency. All Rights Reserved.</p>
                 </div>
-                <div className={styles.right}>
+                <div className={styles.footerRight}>
                     <div className={styles.footerMenu}>
                         <h3>About Us</h3>
                         <ul>
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
             </div>
             <FooterBottom />
-        </footer>
+        </div>
     )
 }
 
