@@ -25,6 +25,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: path.resolve(`src/templates/page.js`),
       context: { id },
     })
+    if(uri === '/'){
+      createPage({
+        path: `/temp-home`,
+        component: path.resolve(`src/templates/page-temp.js`),
+        context: { id },
+      })
+    }
   })
 
 }

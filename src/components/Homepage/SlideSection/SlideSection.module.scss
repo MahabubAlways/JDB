@@ -1,0 +1,43 @@
+.SlideSection {
+  padding-block: 100px;
+  .container {
+    position: relative;
+    width: 84%;
+    margin: 0 auto;
+    display: flex;
+    .content {
+      width: 50%;
+      h2 {
+        font-family: Barlow;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 34px;
+        margin-bottom: 25px;
+      }
+      p {
+        font-family: Barlow;
+        font-size: 16px;
+      }
+    }
+    .image {
+      width: 48%;
+      margin-left: 2%;
+    }
+    .slideNav {
+      position: absolute;
+      right: 0;
+      top: -50px;
+      button {
+        cursor: pointer;
+        border: none;
+        background: none;
+        &:first-child {
+          margin-right: 20px;
+        }
+        .icon {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
