@@ -1,41 +1,86 @@
 .SlideSection {
-  padding-block: 100px;
-  .container {
-    position: relative;
-    width: 84%;
-    margin: 0 auto;
+  padding: 4rem 3rem 4rem 0rem;
+  .slideCounter {
     display: flex;
-    .content {
-      width: 50%;
-      h2 {
-        font-family: Barlow;
-        font-style: italic;
-        font-weight: 400;
-        font-size: 34px;
-        margin-bottom: 25px;
+    align-items: center;
+    position: relative;
+    .slideNumbers {
+      display: flex;
+      width: 25%;
+      flex-direction: column;
+      align-items: flex-end;
+      .currentSlideNumber {
+        color: #ffcc00;
+        font-size: 350px;
+        font-family: Playfair Display;
+        font-weight: 600;
+        margin: 0;
+        margin-right: -8%;
+        z-index: 10;
+        line-height: 0;
       }
-      p {
-        font-family: Barlow;
-        font-size: 16px;
-      }
-    }
-    .image {
-      width: 48%;
-      margin-left: 2%;
-    }
-    .slideNav {
-      position: absolute;
-      right: 0;
-      top: -50px;
-      button {
-        cursor: pointer;
-        border: none;
-        background: none;
-        &:first-child {
-          margin-right: 20px;
+      .totalCounter {
+        position: absolute;
+        bottom: 0;
+        left: 3%;
+        span {
+          font-family: Barlow;
+          font-weight: 500;
+          font-size: 18px;
+          color: black;
+          .line {
+            display: -webkit-inline-box;
+          }
         }
-        .icon {
-          font-size: 25px;
+      }
+    }
+    .mainSLider {
+      width: 75%;
+      min-height: 350px;
+      .mySlides {
+        display: none;
+      }
+    }
+  }
+  .slideContent {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    .contentContainer {
+      width: 75%;
+      display: flex;
+      justify-content: space-between;
+      .content {
+        width: 80%;
+        min-height: 240px;
+        h3 {
+          font-family: Barlow;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 1.2;
+          margin-bottom: 20px;
+          color: black;
+        }
+        p {
+          font-family: Barlow;
+          font-size: 16px;
+        }
+      }
+      .sliderNav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        .buttonGrid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        button {
+          background: none;
+          outline: none;
+          border: 0;
+          font-size: 24px;
+          margin: 10px 0 0 50px;
+          cursor: pointer;
         }
       }
     }

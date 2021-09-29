@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from 'react'
 import * as styles from './SlideSection.module.scss'
 
-const tabData = [
+const slides = [
     {
         title: 'Your Full-Service Digital Marketing Agency for Accelerated Business Growth',
         Desc: '<p>Our full-service internet marketing agency gives you the advantages of an in-house marketing team without the time and cost associated with hiring individual team members. We partner with your company to ensure you have the services you need when you need them.</p> <p>Whether you are a new company that requires help introducing your brand to your audience or an established business looking to overhaul your image, JDB2M offers a complete range of services to meet your needs. This includes brand development, growth strategies, content development, social media management, and much more. </p>'
@@ -24,41 +24,70 @@ const tabData = [
 ]
 
 const SlideSection = () => {
-    const [slide, setSlide] = useState(0);
 
+    let length = slides.length;
+    const lengthString = length.toString();
+
+    const [selected, setSelected] = useState(0);
     function Plus(){
-        if(slide >= tabData.length - 1){
-          setSlide(0);
-        }else{
-          setSlide(slide + 1);
-        }
+      if(selected >= slides.length - 1){
+        setSelected(0);
+      }else{
+        setSelected(selected + 1);
       }
-      function Minus(){
-        if(slide <= 0){
-          setSlide(tabData.length - 1);
-        }else{
-          setSlide(slide - 1);
-        }
     }
-
-    const {title, Desc} = tabData[slide]
-
+    function Minus(){
+      if(selected <= 0){
+        setSelected(slides.length - 1);
+      }else{
+        setSelected(selected - 1);
+      }
+    }
+  
     return (
-        <div className={styles.SlideSection}>
-            <div className={styles.container}>
-                <div className={styles.content}>
-                    <h2>{title}</h2>
-                    <div dangerouslySetInnerHTML={{ __html: Desc }} />
-                </div>
-                <div className={styles.image}>
-                    <StaticImage src="../../../images/tab-dummy-img.jpeg" alt="" />
-                </div>
-                <div className={styles.slideNav}>
-                    <button onClick={() => Minus()}><FontAwesomeIcon className={styles.icon} icon={faChevronLeft} /></button>
-                    <button onClick={() => Plus()}><FontAwesomeIcon className={styles.icon} icon={faChevronRight} /></button>
-                </div>
+      <div className={styles.SlideSection}>
+        <div className={styles.slideCounter}>
+          <div className={styles.slideNumbers}>
+            <h3 className={styles.currentSlideNumber}>{selected + 1}</h3>
+            <div className={styles.totalCounter}>
+              <span>
+                0{selected + 1} {<div className={styles.line}>____</div>} {lengthString.padStart(2, "0")}
+              </span>
             </div>
+          </div>
+  
+          <div className={styles.mainSLider}>
+            <StaticImage src="../../../images/slider-dummy.jpg" alt="A dinosaur" />
+          </div>
         </div>
+  
+        <div className={styles.slideContent}>
+          <div
+            className={styles.contentContainer}
+          >
+            <div className={styles.content}>
+              <h3>
+                {slides[selected].title}
+              </h3>
+              <div dangerouslySetInnerHTML={{ __html: slides[selected].Desc }} />
+            </div>
+            <div className={styles.sliderNav}>
+              <div className={styles.buttonGrid}>
+                <button aria-label="Previous Slide"
+                  onClick={() => Minus()}
+                >
+                  <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
+                <button aria-label="Next Slide"
+                  onClick={() => Plus()}
+                >
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     )
 }
 
