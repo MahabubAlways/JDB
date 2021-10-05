@@ -1,0 +1,39 @@
+@import "include-media";
+.LeftHeadingRightContent {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-top: 20px;
+  @include media("<tablet") {
+    width: 84%;
+    margin-inline: auto;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  h2 {
+    width: 30%;
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 1.2;
+    margin: 0;
+    color: black;
+    @include media("<tablet") {
+      width: 100%;
+      font-size: 28px;
+    }
+  }
+  p {
+    width: 26%;
+    margin-top: 5%;
+    margin-left: 6%;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Barlow;
+    color: black;
+    @include media("<tablet") {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

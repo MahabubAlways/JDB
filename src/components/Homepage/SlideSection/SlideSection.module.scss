@@ -1,5 +1,5 @@
 .SlideSection {
-  padding: 4rem 3rem 4rem 0rem;
+  padding: 4rem 3rem 0rem 0rem;
   .slideCounter {
     display: flex;
     align-items: center;
@@ -81,6 +81,54 @@
           font-size: 24px;
           margin: 10px 0 0 50px;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .SlideSection {
+    padding: 2rem 1rem;
+    .slideCounter {
+      flex-direction: column;
+      .slideNumbers {
+        .currentSlideNumber {
+          position: absolute;
+          font-size: 120px;
+          margin-right: unset;
+          left: 10px;
+          bottom: 20px;
+        }
+        .totalCounter {
+          bottom: -50px;
+        }
+      }
+      .mainSLider {
+        width: 100%;
+        min-height: unset;
+      }
+    }
+    .slideContent {
+      margin-top: 20px;
+      .contentContainer {
+        width: 100%;
+        flex-direction: column-reverse;
+        .content {
+          width: 100%;
+          margin-top: 20px;
+          h3 {
+            font-size: 24px;
+          }
+        }
+        .sliderNav {
+          button {
+            background: none;
+            outline: none;
+            border: 0;
+            font-size: 18px;
+            margin: 8px 0 0 15px;
+            cursor: pointer;
+          }
         }
       }
     }

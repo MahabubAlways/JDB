@@ -1,0 +1,76 @@
+@import "include-media";
+.FaqAccordion {
+  width: 84%;
+  margin-inline: auto;
+  margin-block: 60px;
+  h2 {
+    font-family: Barlow;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 25px;
+  }
+  .strategyaccordionitem {
+    margin: 20px 0;
+    .accordionHeading {
+      color: #000000;
+      font-family: Barlow;
+      font-weight: 500;
+      font-size: 28px;
+      @include media("<tablet") {
+        color: #000000;
+        font-size: 15px;
+      }
+      .accordionButton {
+        background: transparent;
+        padding-left: 0;
+        cursor: pointer;
+        @include media("<tablet") {
+          background: transparent;
+          padding-left: 0;
+          display: flex;
+          align-items: center;
+          padding: 10px 0;
+          line-height: 1.3;
+        }
+        &:focus {
+          outline: none;
+        }
+        &::before {
+          content: url(/images/AccordionPlusIcon.svg);
+          display: inline-block !important;
+          border: none;
+          transform: none;
+          margin-right: 10px;
+          top: 5px;
+          width: 25px;
+          position: relative;
+          @include media("<tablet") {
+            top: 3px;
+          }
+        }
+        &[aria-expanded="true"]::before,
+        &[aria-selected="true"]::before {
+          content: url(/images/AccordionMinusIcon.svg);
+        }
+      }
+    }
+    .panel {
+      .accordionAnswer {
+        font-family: Barlow;
+        font-size: 16px;
+        margin: 10px 30px 35px 35px;
+        color: #000000;
+        h3 {
+          font-family: Barlow;
+          font-weight: 500;
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+        @include media("<tablet") {
+          margin: 0 30px 15px 35px;
+        }
+      }
+    }
+  }
+}

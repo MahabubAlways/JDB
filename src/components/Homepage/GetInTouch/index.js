@@ -6,15 +6,19 @@ import * as styles from './GetInTouch.module.scss';
 export const fragment = graphql`
   fragment GetInTouch on WpPage_Postfields_Sections_HomeContact {
     fieldGroupName
-    title
+    content
   }
 `;
 
 const GetInTouch = ({data}) => {
         return (
             <div id="contactForm" className={styles.GetInTouch}>
-                <h2>{data.title}</h2>
-                <GlobalContactForm label={true} />
+              <div className={styles.wrapper}>
+                <div className={styles.left} dangerouslySetInnerHTML={{ __html: data?.content }} />
+                <div className={styles.right}>
+                  <GlobalContactForm label={true} />
+                </div>
+              </div>
             </div>
         )
 }

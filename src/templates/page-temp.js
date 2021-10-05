@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import { ClientSlider, Future, GetInTouch, Hero, HeroBottom, HomeServices, SlideSection, TrustedPartner, Vision } from '../components/Homepage';
+import { AccordionElement, ClientSlider, Future, GetInTouch, Hero, HeroBottom, HomeServices, LeftHeadingRightContent, SlideSection, TrustedPartner, Vision } from '../components/Homepage';
 // import { CaseStudies, GrowthHero, ImageContent } from "../components/Growth";
 // import { ClientSlider, Future, GetInTouch, Hero, HeroBottom, HomeServices, TrustedPartner, Vision } from '../components/Homepage';
 import Layouts from '../components/Layouts';
@@ -34,7 +34,9 @@ const PageTemp = ({data}) => {
               return (
                 <>
                     <Future key={index} data={section} />
+                    <LeftHeadingRightContent />
                     <SlideSection />
+                    <AccordionElement />
                 </>
                 );
 
