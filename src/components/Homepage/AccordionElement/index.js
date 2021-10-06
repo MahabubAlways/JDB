@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import {
     Accordion,
@@ -71,6 +72,9 @@ const AccordionElement = () => {
                         </AccordionItem>
                 ))}
             </Accordion>
+            <div className={styles.btnContainer}>
+                <Link to="/" className={`btnBlack ${styles.btn}`}>See More</Link>
+            </div>
         </div>
     )
 }

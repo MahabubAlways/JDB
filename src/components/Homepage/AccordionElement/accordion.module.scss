@@ -17,6 +17,19 @@
       margin-bottom: 0;
     }
   }
+  .btnContainer {
+    padding-block-start: 30px;
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #000;
+      color: #fec707;
+      font-family: Barlow;
+      font-weight: 600;
+      padding: 12px 36px;
+      margin-top: 20px;
+    }
+  }
   .strategyaccordionitem {
     padding: 15px 0;
     border-bottom: 1px solid #000;
@@ -67,7 +80,7 @@
       .accordionAnswer {
         font-family: Barlow;
         font-size: 16px;
-        margin: 15px 30px 15px 35px;
+        margin: 15px 30px 15px 0;
         color: #000000;
         @include media("<tablet") {
           margin: 15px 30px 15px 0px;
