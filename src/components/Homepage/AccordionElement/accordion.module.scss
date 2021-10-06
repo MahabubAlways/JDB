@@ -32,6 +32,7 @@
         background: transparent;
         padding-left: 0;
         cursor: pointer;
+        position: relative;
         @include media("<tablet") {
           background: transparent;
           padding-left: 0;
@@ -48,10 +49,10 @@
           display: inline-block !important;
           border: none;
           transform: none;
-          margin-right: 10px;
           top: 5px;
           width: 25px;
-          position: relative;
+          position: absolute;
+          right: 0;
           @include media("<tablet") {
             top: 3px;
           }

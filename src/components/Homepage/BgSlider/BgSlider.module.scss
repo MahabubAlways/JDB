@@ -2,7 +2,7 @@
 .BgSliderWrapper {
   .BgSlider {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     @include media("<tablet") {
@@ -21,8 +21,10 @@
         font-family: Barlow;
         font-size: 48px;
         margin-bottom: 15px;
+        width: 60%;
         @include media("<tablet") {
           font-size: 28px;
+          width: 100%;
         }
       }
       p {
@@ -53,6 +55,14 @@
   }
   :global(.react-multi-carousel-dot-list) {
     bottom: 20px;
+    justify-content: flex-start;
+    width: 84%;
+    margin-inline: auto;
+    button {
+      border-width: 1px;
+      width: 8px;
+      height: 8px;
+    }
   }
   @include media("<tablet") {
     :global(.react-multi-carousel-list) {
