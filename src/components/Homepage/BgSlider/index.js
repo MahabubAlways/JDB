@@ -1,9 +1,8 @@
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
-import React, { useState } from 'react';
+import React from 'react';
+import Carousel from "react-multi-carousel";
 import * as styles from './BgSlider.module.scss';
 
 const BgSlider = () => {
@@ -74,41 +73,49 @@ const BgSlider = () => {
         ]
 
 
-        const [selected, setSelected] = useState(0);
-        function Plus(){
-          if(selected >= slides.length - 1){
-            setSelected(0);
-          }else{
-            setSelected(selected + 1);
-          }
-        }
-        function Minus(){
-          if(selected <= 0){
-            setSelected(slides.length - 1);
-          }else{
-            setSelected(selected - 1);
-          }
-        }
+        const responsive = {
+            desktop: {
+              breakpoint: { max: 3000, min: 1025 },
+              items: 1,
+            },
+            tablet: {
+              breakpoint: { max: 1024, min: 465 },
+              items: 1,
+            },
+            mobile: {
+              breakpoint: { max: 464, min: 0 },
+              items: 1,
+            },
+        };
 
     return (
-        <BgImage image={slides[selected].image} className={styles.BgSlider}>
-            <div className={styles.content}>
-                <h2>{slides[selected].title}</h2>
-                <p>{slides[selected].desc}</p>
-            </div>
-            <div className={styles.sliderNav}>
-                <button aria-label="Previous Slide"
-                  onClick={() => Minus()}
-                >
-                  <FontAwesomeIcon icon={faChevronLeft} />
-                </button>
-                <button aria-label="Next Slide"
-                  onClick={() => Plus()}
-                >
-                  <FontAwesomeIcon icon={faChevronRight} />
-                </button>
-            </div>
-        </BgImage>
+        <div className={styles.BgSliderWrapper}>
+            <Carousel
+            ssr
+            arrows={true}
+            infinite={true}
+            autoPlay={false}
+            itemClass="image-item"
+            responsive={responsive}
+            showDots={true}
+            >
+            {
+                slides.map((logo, index) => {
+                    return (
+                        <BgImage image={logo.image} className={styles.BgSlider}>
+                            <div className={styles.content}>
+                                <h2>{logo.title}</h2>
+                                <p>{logo.desc}</p>
+                                <div className={styles.btnContainer}>
+                                    <Link to="/" className={`btnWhite ${styles.btn}`}>See More</Link>
+                                </div>
+                            </div>
+                        </BgImage>
+                    )
+                })
+            }
+            </Carousel>
+        </div>
     )
 }
 

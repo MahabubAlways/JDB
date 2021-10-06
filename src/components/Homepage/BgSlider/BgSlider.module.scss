@@ -1,56 +1,68 @@
 @import "include-media";
-.BgSlider {
-  position: relative;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  @include media("<tablet") {
-    height: 350px;
-  }
-  .content {
-    width: 74%;
-    margin-inline: auto;
-    color: #ffffff;
-    @include media("<tablet") {
-      width: 84%;
-    }
-    h2 {
-      font-family: Barlow;
-      font-size: 48px;
-      margin-bottom: 15px;
-      @include media("<tablet") {
-        font-size: 28px;
-      }
-    }
-    p {
-      width: 70%;
-      @include media("<tablet") {
-        width: 100%;
-      }
-    }
-  }
-  .sliderNav {
-    position: absolute;
-    width: 84%;
-    left: 50%;
-    top: calc(50% - 44px);
-    transform: translateX(-50%);
+.BgSliderWrapper {
+  .BgSlider {
+    position: relative;
+    height: 80vh;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     @include media("<tablet") {
-      justify-content: right;
-      top: 30px;
+      height: 350px;
     }
-    button {
-      background: none;
-      outline: none;
-      border: 0;
-      color: #919697;
-      font-size: 44px;
-      font-weight: 400;
-      cursor: pointer;
+    .content {
+      width: 74%;
+      margin-inline: auto;
+      color: #ffffff;
+      margin-top: 14%;
       @include media("<tablet") {
-        font-size: 28px;
+        margin-top: 0;
+        width: 84%;
+      }
+      h2 {
+        font-family: Barlow;
+        font-size: 48px;
+        margin-bottom: 15px;
+        @include media("<tablet") {
+          font-size: 28px;
+        }
+      }
+      p {
+        width: 70%;
+        @include media("<tablet") {
+          width: 100%;
+        }
+      }
+      .btnContainer {
+        .btn {
+          display: inline-block;
+          text-decoration: none;
+          background: #fff;
+          color: #e61d48;
+          font-family: Barlow;
+          font-weight: 600;
+          padding: 12px 36px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  :global(.react-multi-carousel-dot-list) {
+    bottom: 20px;
+  }
+  @include media("<tablet") {
+    :global(.react-multi-carousel-list) {
+      :global(.react-multiple-carousel__arrow--left) {
+        left: unset;
+        right: calc(4% + 15px);
+      }
+      :global(.react-multiple-carousel__arrow--right) {
+        right: 0;
+      }
+      :global(.react-multiple-carousel__arrow) {
+        top: 10px;
+        background: transparent;
+      }
+      :global(.react-multiple-carousel__arrow::before) {
+        color: #fff;
       }
     }
   }
