@@ -45,6 +45,12 @@
       }
     }
   }
+  :global(.react-multiple-carousel__arrow) {
+    background: transparent;
+  }
+  :global(.react-multiple-carousel__arrow::before) {
+    color: #fff;
+  }
   :global(.react-multi-carousel-dot-list) {
     bottom: 20px;
   }
@@ -59,10 +65,6 @@
       }
       :global(.react-multiple-carousel__arrow) {
         top: 10px;
-        background: transparent;
-      }
-      :global(.react-multiple-carousel__arrow::before) {
-        color: #fff;
       }
     }
   }
