@@ -1,4 +1,5 @@
 export { default as AccordionElement } from './AccordionElement'
+export { default as BgSlider } from './BgSlider'
 export { default as ClientSlider } from './ClientSlider'
 export { default as Future } from './Future'
 export { default as GetInTouch } from './GetInTouch'

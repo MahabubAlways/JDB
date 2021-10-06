@@ -1,0 +1,57 @@
+@import "include-media";
+.BgSlider {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  @include media("<tablet") {
+    height: 350px;
+  }
+  .content {
+    width: 74%;
+    margin-inline: auto;
+    color: #ffffff;
+    @include media("<tablet") {
+      width: 84%;
+    }
+    h2 {
+      font-family: Barlow;
+      font-size: 48px;
+      margin-bottom: 15px;
+      @include media("<tablet") {
+        font-size: 28px;
+      }
+    }
+    p {
+      width: 70%;
+      @include media("<tablet") {
+        width: 100%;
+      }
+    }
+  }
+  .sliderNav {
+    position: absolute;
+    width: 84%;
+    left: 50%;
+    top: calc(50% - 44px);
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    @include media("<tablet") {
+      justify-content: right;
+      top: 30px;
+    }
+    button {
+      background: none;
+      outline: none;
+      border: 0;
+      color: #919697;
+      font-size: 44px;
+      font-weight: 400;
+      cursor: pointer;
+      @include media("<tablet") {
+        font-size: 28px;
+      }
+    }
+  }
+}
