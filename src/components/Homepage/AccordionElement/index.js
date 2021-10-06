@@ -38,7 +38,7 @@ const content = [
         status: false,
     }
 ]
-
+// preExpanded={['1']}
 const AccordionElement = () => {
     return (
         <div className={styles.FaqAccordion}>

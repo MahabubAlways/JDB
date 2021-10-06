@@ -2,24 +2,28 @@
 .FaqAccordion {
   width: 84%;
   margin-inline: auto;
-  margin-block: 60px;
+  margin-block: 60px 100px;
   h2 {
     font-family: Barlow;
     font-style: italic;
     font-weight: 400;
     font-size: 48px;
     margin-bottom: 25px;
+    @include media("<tablet") {
+      font-size: 28px;
+      margin-bottom: 0;
+    }
   }
   .strategyaccordionitem {
-    margin: 20px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #000;
     .accordionHeading {
       color: #000000;
       font-family: Barlow;
-      font-weight: 500;
-      font-size: 28px;
+      font-weight: 400;
+      font-size: 24px;
       @include media("<tablet") {
-        color: #000000;
-        font-size: 15px;
+        font-size: 19px;
       }
       .accordionButton {
         background: transparent;
@@ -36,39 +40,22 @@
         &:focus {
           outline: none;
         }
-        &::before {
-          content: url(/images/AccordionPlusIcon.svg);
-          display: inline-block !important;
-          border: none;
-          transform: none;
-          margin-right: 10px;
-          top: 5px;
-          width: 25px;
-          position: relative;
-          @include media("<tablet") {
-            top: 3px;
-          }
-        }
-        &[aria-expanded="true"]::before,
-        &[aria-selected="true"]::before {
-          content: url(/images/AccordionMinusIcon.svg);
-        }
       }
     }
     .panel {
       .accordionAnswer {
         font-family: Barlow;
         font-size: 16px;
-        margin: 10px 30px 35px 35px;
+        margin: 15px 30px 15px 0px;
         color: #000000;
         h3 {
           font-family: Barlow;
-          font-weight: 500;
-          font-size: 18px;
+          font-weight: 400;
+          font-size: 17px;
           margin-bottom: 15px;
         }
         @include media("<tablet") {
-          margin: 0 30px 15px 35px;
+          margin: 15px 30px 15px 0px;
         }
       }
     }

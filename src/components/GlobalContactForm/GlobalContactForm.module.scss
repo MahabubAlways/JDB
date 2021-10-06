@@ -92,6 +92,29 @@
       float: right;
       cursor: pointer;
     }
+    &.homeForm {
+      margin-top: 40px;
+      .inputContainer {
+        .input {
+          width: 770px;
+          @include media("<tablet") {
+            width: 209px;
+          }
+          @media only screen and (max-width: 374px) {
+            width: 141px;
+          }
+        }
+        .textarea {
+          width: 770px;
+          @include media("<tablet") {
+            width: 210px;
+          }
+          @media only screen and (max-width: 374px) {
+            width: 161px;
+          }
+        }
+      }
+    }
     &.border {
       .inputContainer {
         .inputLabel {

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import * as styles from './GlobalContactForm.module.scss';
 
-const GlobalContactForm = ({border, label, fullWidthInput, PhoneField, BudgetField, ServiceField}) => {
+const GlobalContactForm = ({border, label, fullWidthInput, PhoneField, BudgetField, ServiceField, homeForm}) => {
     const [state, setState] = useState({});
     const [message, setMessage] = useState('');
     const [status, setStatus] = useState(false);
@@ -37,7 +37,7 @@ const GlobalContactForm = ({border, label, fullWidthInput, PhoneField, BudgetFie
     
     return (
         <div className={styles.GlobalContactForm}>
-            <form className={border ? styles.border : ''} method="POST" name="contact" data-netlify="true" onSubmit={handleSubmit}>
+            <form className={`${border ? styles.border : ''} ${homeForm ? styles.homeForm : ''}`} method="POST" name="contact" data-netlify="true" onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="contact" />
                 <div className={styles.inputContainer}>
                     {label ? <label className={styles.inputLabel} htmlFor="name">Name</label> : ''}

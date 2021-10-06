@@ -16,7 +16,7 @@ const GetInTouch = ({data}) => {
               <div className={styles.wrapper}>
                 <div className={styles.left} dangerouslySetInnerHTML={{ __html: data?.content }} />
                 <div className={styles.right}>
-                  <GlobalContactForm label={true} />
+                  <GlobalContactForm label={true} homeForm={true} />
                 </div>
               </div>
             </div>
