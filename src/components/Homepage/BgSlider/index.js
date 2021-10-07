@@ -106,8 +106,8 @@ const BgSlider = () => {
                             <div className={styles.content}>
                                 <h2>{logo.title}</h2>
                                 <p>{logo.desc}</p>
-                                <div className={styles.btnContainer}>
-                                    <Link to="/" className={`btnWhite ${styles.btn}`}>See More</Link>
+                                <div>
+                                <Link to="/" className={`btnWhite ${styles.seeBtn}`}>See More</Link>
                                 </div>
                             </div>
                         </BgImage>

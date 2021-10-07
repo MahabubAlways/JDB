@@ -34,17 +34,17 @@ const PageTemp = ({data}) => {
               return (
                 <>
                     <Future key={index} data={section} />
-                    <SimpleContent />
-                    <SlideSection />
+                    <AccordionElement />
                 </>
                 );
 
             case 'page_Postfields_Sections_HomeVision':
               return (
                 <>
-                  <Vision key={index} data={section} />
-                  <AccordionElement />
                   <BgSlider />
+                  <SimpleContent />
+                  <SlideSection />
+                  <Vision key={index} data={section} />
                 </>
               );
 

@@ -4,18 +4,20 @@
     position: relative;
     height: 100vh;
     display: flex;
-    align-items: center;
     @include media("<tablet") {
       height: 350px;
     }
     .content {
       width: 74%;
-      margin-inline: auto;
       color: #ffffff;
-      margin-top: 6%;
+      position: absolute;
+      left: 13%;
+      top: 50%;
       @include media("<tablet") {
         margin-top: 0;
         width: 84%;
+        left: 8%;
+        top: 25%;
       }
       h2 {
         font-family: Playfair Display;
@@ -34,16 +36,23 @@
           width: 100%;
         }
       }
-      .btnContainer {
-        .btn {
-          display: inline-block;
-          text-decoration: none;
-          background: #fff;
-          color: #e61d48;
-          font-family: Barlow;
-          font-weight: 600;
-          padding: 12px 36px;
-          margin-top: 20px;
+      .seeBtn {
+        font-family: Barlow;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 15px;
+        background: #fff;
+        color: #e61d48;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 10px 25px;
+        border-color: transparent;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-block-end: 40px;
+        @include media("<tablet") {
+          margin-left: 0%;
+          margin-block: 15px 40px;
         }
       }
     }
@@ -51,17 +60,26 @@
   :global(.react-multiple-carousel__arrow) {
     background: transparent;
   }
+  :global(.react-multi-carousel-list) {
+    align-items: unset;
+    position: relative;
+    button {
+      top: 52%;
+    }
+  }
   :global(.react-multiple-carousel__arrow::before) {
     color: #fff;
   }
-  :global(.react-multiple-carousel__arrow--left::before) {
-    content: url(/images/slider-arrow-left.svg);
-  }
-  :global(.react-multiple-carousel__arrow--right::before) {
-    content: url(/images/slider-arrow-right.svg);
+  @include media(">tablet") {
+    :global(.react-multiple-carousel__arrow--left::before) {
+      content: url(/images/slider-arrow-left.svg);
+    }
+    :global(.react-multiple-carousel__arrow--right::before) {
+      content: url(/images/slider-arrow-right.svg);
+    }
   }
   :global(.react-multi-carousel-dot-list) {
-    bottom: 20px;
+    bottom: 50px;
     justify-content: flex-start;
     width: 74%;
     margin-inline: auto;
@@ -79,6 +97,10 @@
     }
   }
   @include media("<tablet") {
+    :global(.react-multi-carousel-dot-list) {
+      bottom: 20px;
+      width: 84%;
+    }
     :global(.react-multi-carousel-list) {
       :global(.react-multiple-carousel__arrow--left) {
         left: unset;
