@@ -96,7 +96,7 @@
       margin-top: 40px;
       .inputContainer {
         .input {
-          width: 770px;
+          width: 660px;
           @include media("<tablet") {
             width: 209px;
           }
@@ -105,7 +105,7 @@
           }
         }
         .textarea {
-          width: 770px;
+          width: 660px;
           @include media("<tablet") {
             width: 210px;
           }

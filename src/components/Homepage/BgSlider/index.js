@@ -7,7 +7,7 @@ import * as styles from './BgSlider.module.scss';
 
 const BgSlider = () => {
 
-    const { Image1, Image2, Image3 } = useStaticQuery(
+    const { Image1, Image2, Image3, Image4 } = useStaticQuery(
         graphql`
             query {
                 Image1: file(relativePath: { eq: "slide-1.jpg" }) {
@@ -25,6 +25,11 @@ const BgSlider = () => {
                         gatsbyImageData
                     }
                 }
+                Image4: file(relativePath: { eq: "slide-4.jpg" }) {
+                    childImageSharp {
+                        gatsbyImageData
+                    }
+                }
             }
         `
         );
@@ -33,12 +38,12 @@ const BgSlider = () => {
             {
                 title: "Marketing And Creative Services (B2B and B2C)",
                 desc: "Everything you need to get your brand seen and look good doing it. We create and manage your visual and written content to present a polished, cohesive brand image.",
-                image: getImage(Image1)
+                image: getImage(Image4)
             },
             {
                 title: "Social Media Management",
                 desc: "We analyze, develop, and manage your social media presence, including content optimization, user engagement, and graphics.",
-                image: getImage(Image2)
+                image: getImage(Image1)
             },
             {
                 title: "SEO/SEM",

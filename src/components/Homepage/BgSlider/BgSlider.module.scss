@@ -17,14 +17,14 @@
         margin-top: 0;
         width: 84%;
         left: 8%;
-        top: 25%;
+        top: 20%;
       }
       h2 {
         font-family: Playfair Display;
         font-style: italic;
-        font-size: 48px;
+        font-size: 56px;
         margin-bottom: 15px;
-        width: 60%;
+        width: 70%;
         @include media("<tablet") {
           font-size: 28px;
           width: 100%;
@@ -79,13 +79,13 @@
     }
   }
   :global(.react-multi-carousel-dot-list) {
-    bottom: 50px;
+    bottom: 40px;
     justify-content: flex-start;
     width: 74%;
     margin-inline: auto;
     button {
       height: 2px;
-      width: 28px;
+      width: 15px;
       border-radius: 0;
       border: none;
       background: rgba(255, 255, 255, 0.4);
