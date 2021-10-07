@@ -12,7 +12,7 @@
       width: 74%;
       margin-inline: auto;
       color: #ffffff;
-      margin-top: 14%;
+      margin-top: 6%;
       @include media("<tablet") {
         margin-top: 0;
         width: 84%;
@@ -53,6 +53,12 @@
   }
   :global(.react-multiple-carousel__arrow::before) {
     color: #fff;
+  }
+  :global(.react-multiple-carousel__arrow--left::before) {
+    content: url(/images/slider-arrow-left.svg);
+  }
+  :global(.react-multiple-carousel__arrow--right::before) {
+    content: url(/images/slider-arrow-right.svg);
   }
   :global(.react-multi-carousel-dot-list) {
     bottom: 20px;
