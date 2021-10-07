@@ -102,7 +102,6 @@ const BgSlider = () => {
             autoPlay={false}
             itemClass="image-item"
             responsive={responsive}
-            showDots={true}
             >
             {
                 slides.map((logo, index) => {
