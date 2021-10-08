@@ -106,7 +106,7 @@ const BgSlider = () => {
             {
                 slides.map((logo, index) => {
                     return (
-                        <BgImage image={logo.image} className={styles.BgSlider}>
+                        <BgImage key={index} image={logo.image} className={styles.BgSlider}>
                             <div className={styles.content}>
                                 <h2>{logo.title}</h2>
                                 <p>{logo.desc}</p>

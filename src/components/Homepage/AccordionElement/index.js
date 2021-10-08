@@ -1,12 +1,5 @@
 import { Link } from 'gatsby';
-import React from 'react';
-import {
-    Accordion,
-    AccordionItem,
-    AccordionItemButton,
-    AccordionItemHeading,
-    AccordionItemPanel
-} from 'react-accessible-accordion';
+import React, { useEffect, useRef, useState } from 'react';
 import * as styles from './accordion.module.scss';
 
 const content = [
@@ -52,26 +45,42 @@ const content = [
         uuid: '6',
         status: false,
     }
-]
-// preExpanded={['1']}
+];
+
 const AccordionElement = () => {
+    const [Selected, setSelected] = useState(0)
+    const panelrefs = useRef([]);
+    const btnrefs = useRef([]);
+
+    function handleToggle (i) {
+        panelrefs.current.map(item => item.style.maxHeight = 0)
+        panelrefs.current[i].style.maxHeight = `${panelrefs.current[i].scrollHeight}px`;
+        btnrefs.current.map(item => item.setAttribute("aria-expanded", "false"))
+        btnrefs.current[i].setAttribute("aria-expanded", "true");
+    };
+
+    useEffect(() => {
+        panelrefs.current[0].style.maxHeight = `${panelrefs.current[0].scrollHeight}px`;
+        btnrefs.current[0].setAttribute("aria-expanded", "true");
+    }, [])
+
     return (
         <div className={styles.FaqAccordion}>
             <h2>Services</h2>
-            <Accordion preExpanded={['1']} allowMultipleExpanded={false}>
-                {content.map(({ question, answer, uuid, status }) => (
-                        <AccordionItem uuid={uuid} key={uuid} className={styles.strategyaccordionitem}>
-                            <AccordionItemHeading className={styles.accordionHeading}>
-                                <AccordionItemButton className={styles.accordionButton}>
-                                    {question}
-                                </AccordionItemButton>
-                            </AccordionItemHeading>
-                            <AccordionItemPanel className={styles.panel}>
-                                <div className={styles.accordionAnswer} dangerouslySetInnerHTML={{ __html: answer }} />
-                            </AccordionItemPanel>
-                        </AccordionItem>
+            <div>
+                {content.map((item, index) => (
+                        <div key={index} className={styles.strategyaccordionitem}>
+                            <div className={styles.accordionHeading}>
+                                <button className={`${styles.accordionButton}`} onClick={() => handleToggle(index)} ref={ref => btnrefs.current.push(ref)}>
+                                    {item.question}
+                                </button>
+                            </div>
+                            <div className={`${styles.panel}`} ref={ref => panelrefs.current.push(ref)}>
+                                <div className={styles.accordionAnswer} dangerouslySetInnerHTML={{ __html: item.answer }} />
+                            </div>
+                        </div>
                 ))}
-            </Accordion>
+            </div>
             <div className={styles.btnContainer}>
                 <Link to="/" className={`btnBlack ${styles.btn}`}>See More</Link>
             </div>

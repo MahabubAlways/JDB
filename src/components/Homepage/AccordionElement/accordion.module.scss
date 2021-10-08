@@ -29,21 +29,23 @@
   }
   .strategyaccordionitem {
     border-bottom: 1px solid #000;
+    transition: all 400ms ease;
     .accordionHeading {
       color: #000000;
-      font-family: Barlow;
-      font-weight: 400;
-      font-size: 24px;
-      @include media("<tablet") {
-        font-size: 19px;
-      }
       .accordionButton {
+        font-family: Barlow;
+        font-weight: 400;
+        font-size: 24px;
         background: transparent;
+        border: none;
+        width: 100%;
+        text-align: left;
         padding-left: 0;
         cursor: pointer;
         position: relative;
         padding: 10px 0;
         @include media("<tablet") {
+          font-size: 19px;
           background: transparent;
           padding-left: 0;
           display: flex;
@@ -64,14 +66,15 @@
           position: absolute;
           right: 0;
         }
-        &[aria-expanded="true"]::before,
-        &[aria-selected="true"]::before {
+        &[aria-expanded="true"]::before {
           content: url(/images/AccordionMinusIcon.svg);
         }
       }
     }
     .panel {
-      animation: fadeInTop 0.8s ease;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.2s ease-out;
       .accordionAnswer {
         font-family: Barlow;
         font-size: 16px;
@@ -87,8 +90,10 @@
 @keyframes fadeInTop {
   0% {
     opacity: 0;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
+    visibility: visible;
   }
 }

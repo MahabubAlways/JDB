@@ -1,6 +1,4 @@
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React, { useState } from 'react';
 import * as styles from './DarkSlider.module.scss';
@@ -26,11 +24,6 @@ const DarkSlider = () => {
 
     const slides = [
         {
-            title: 'Development White-Label and B2C',
-            Desc: 'Even the best product or service can be unsuccessful if customers can&apos;t successfully use the company&apos;s website. We create websites, mobile apps, and software that optimize the user experience and aesthetics with professional development services.',
-            image: getImage(Image1)
-        },
-        {
             title: 'Web Development',
             Desc: 'We build and maintain your website from the ground up to ensure the best user experience.',
             image: getImage(Image2)
@@ -48,51 +41,35 @@ const DarkSlider = () => {
     ]
 
     const [selected, setSelected] = useState(0);
-    const currentSlideNum = selected + 1
-
-    function Plus(){
-      if(selected >= slides.length - 1){
-        setSelected(0);
-      }else{
-        setSelected(selected + 1);
-      }
-    }
-    function Minus(){
-      if(selected <= 0){
-        setSelected(slides.length - 1);
-      }else{
-        setSelected(selected - 1);
-      }
-    }
 
     return (
         <div className={styles.section}>
             <div className={styles.container}>
-                <div className={styles.left}>
-                    <span className={styles.slideNum}>{currentSlideNum.toString().padStart(2, "0")}</span>
+                <div className={styles.top}>
                     <div className={styles.content}>
-                        <h2>{slides[selected].title}</h2>
-                        <p>{slides[selected].Desc}</p>
-                        <div>
-                            <Link to="/" className={`btnWhite ${styles.seeBtn}`}>See More</Link>
-                        </div>
-                        <div className={styles.buttonGrid}>
-                            <button aria-label="Previous Slide"
-                            onClick={() => Minus()}
-                            >
-                            <FontAwesomeIcon icon={faChevronLeft} />
-                            </button>
-                            <span>{`${currentSlideNum.toString().padStart(2, "0")}/${slides.length.toString().padStart(2, "0")}`}</span>
-                            <button aria-label="Next Slide"
-                            onClick={() => Plus()}
-                            >
-                            <FontAwesomeIcon icon={faChevronRight} />
-                            </button>
-                        </div>
+                        <h2>Development White-Label and B2C</h2>
+                        <p>Even the best product or service can be unsuccessful if customers can&apos;t successfully use the company&apos;s website. We create websites, mobile apps, and software that optimize the user experience and aesthetics with professional development services.</p>
                     </div>
                 </div>
-                <div className={styles.right}>
-                    <GatsbyImage className={styles.sliderImg} image={slides[selected].image} alt="" />
+                <div className={styles.bottom}>
+                    <div className={styles.tab}>
+                        <div className={styles.tabs}>
+                            <ul>
+                                {slides.map((item, index) => {
+                                    return(
+                                        <li key={index} className={selected === index ? styles.active : ''}>
+                                            <button onClick={() => setSelected(index)}>{item.title}</button>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                        <div className={styles.content}>
+                            <GatsbyImage className={styles.sliderImg} image={slides[selected].image} alt="" />
+                            <h3>{slides[selected].title}</h3>
+                            <p>{slides[selected].Desc}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
