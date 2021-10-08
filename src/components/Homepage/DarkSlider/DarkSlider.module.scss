@@ -1,0 +1,78 @@
+@import "include-media";
+.section {
+  background: #000;
+  .container {
+    width: 84%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    .left {
+      width: 50%;
+      position: relative;
+      .slideNum {
+        position: absolute;
+        font-family: Playfair Display;
+        display: block;
+        color: #fff;
+        opacity: 0.5;
+        font-style: italic;
+        font-size: 200px;
+        top: -150px;
+        left: -50px;
+        z-index: 0;
+      }
+      .content {
+        color: #fff;
+        position: relative;
+        h2 {
+          font-family: Barlow;
+          font-size: 48px;
+          font-weight: 400;
+          margin-bottom: 15px;
+        }
+        .seeBtn {
+          font-family: Barlow;
+          text-decoration: none;
+          display: inline-block;
+          margin-top: 15px;
+          background: #fff;
+          color: #e61d48;
+          font-weight: 500;
+          text-transform: uppercase;
+          padding: 10px 25px;
+          border-color: transparent;
+          border-top-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          margin-block-end: 40px;
+          @include media("<tablet") {
+            margin-left: 0%;
+            margin-block: 15px 40px;
+          }
+        }
+        .buttonGrid {
+          button {
+            background: transparent;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            font-size: 25px;
+            color: #fff;
+            height: 50px;
+            width: 50px;
+          }
+          span {
+            padding-inline: 20px;
+            font-family: Barlow;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+    .right {
+      width: 40%;
+      padding: 60px 0 60px 10%;
+      .sliderImg {
+        border-radius: 30px;
+      }
+    }
+  }
+}

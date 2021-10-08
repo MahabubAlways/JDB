@@ -1,29 +1,41 @@
 @import "include-media";
-.SimpleContent {
-  width: 84%;
-  margin-inline: auto;
-  padding-top: 60px;
-  h2 {
-    font-family: Playfair Display;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: black;
-    @include media("<tablet") {
-      font-size: 28px;
+.section {
+  padding-block: 60px 0;
+  &.dark {
+    background: #000;
+    padding-block: 60px;
+    .SimpleContent {
+      h2,
+      p {
+        color: #fff !important;
+      }
     }
   }
-  p {
-    width: 60%;
-    font-size: 15px;
-    line-height: 1.5;
-    font-family: Barlow;
-    color: black;
-    @include media("<tablet") {
-      width: 100%;
-      margin-left: 0;
+  .SimpleContent {
+    width: 84%;
+    margin-inline: auto;
+    h2 {
+      font-family: Playfair Display;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: black;
+      @include media("<tablet") {
+        font-size: 28px;
+      }
+    }
+    p {
+      width: 60%;
+      font-size: 15px;
+      line-height: 1.5;
+      font-family: Barlow;
+      color: black;
+      @include media("<tablet") {
+        width: 100%;
+        margin-left: 0;
+      }
     }
   }
 }

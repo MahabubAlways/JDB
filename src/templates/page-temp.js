@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import { AccordionElement, BgSlider, ClientSlider, Future, GetInTouch, Hero, HeroBottom, HomeServices, SimpleContent, SlideSection, TrustedPartner, Vision } from '../components/Homepage';
+import { AccordionElement, BgSlider, ClientSlider, DarkSlider, Future, GetInTouch, Hero, HeroBottom, HomeServices, SimpleContent, SlideSection, TrustedPartner, Vision } from '../components/Homepage';
 // import { CaseStudies, GrowthHero, ImageContent } from "../components/Growth";
 // import { ClientSlider, Future, GetInTouch, Hero, HeroBottom, HomeServices, TrustedPartner, Vision } from '../components/Homepage';
 import Layouts from '../components/Layouts';
@@ -35,6 +35,7 @@ const PageTemp = ({data}) => {
                 <>
                     <Future key={index} data={section} />
                     <AccordionElement />
+                    <DarkSlider />
                 </>
                 );
 
@@ -42,7 +43,7 @@ const PageTemp = ({data}) => {
               return (
                 <>
                   <BgSlider />
-                  <SimpleContent />
+                  <SimpleContent title="More than an agency, a trusted partner" desc="Are you ready to grow your business with a partner who understands your specific digital marketing needs and will develop a plan tailored to your goals? JDB2M, a 360 digital marketing agency, is that partner. With over a decade of experience, our team will identify the best marketing strategies for your company to meet your goals with efficiency, creativity, and results." />
                   <SlideSection />
                   <Vision key={index} data={section} />
                 </>
