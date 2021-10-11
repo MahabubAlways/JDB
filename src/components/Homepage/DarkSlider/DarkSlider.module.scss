@@ -26,15 +26,15 @@
       .tab {
         display: flex;
         .tabs {
-          width: 40%;
+          width: 25%;
           ul {
             padding: 0;
             margin: 0;
             list-style: none;
             li {
               border-bottom: 1px solid #e61d48;
-              &:first-child {
-                border-top: 1px solid #e61d48;
+              &:last-child {
+                border: none;
               }
               &.active {
                 background: #e61d48;
@@ -55,20 +55,48 @@
             }
           }
         }
-        .content {
-          width: 60%;
-          padding-inline-start: 30px;
+        .contentContainer {
+          width: 75%;
           color: #fff;
-          .sliderImg {
-            height: 120px;
-            width: 100%;
+          display: flex;
+          align-items: flex-start;
+          padding-inline-start: 30px;
+          .content {
+            width: 60%;
+            background: #444;
+            padding: 40px 30px;
+            margin-right: -50px;
+            overflow-y: visible;
+            z-index: 1;
+            h3 {
+              font-family: Barlow;
+              font-weight: 400;
+              font-size: 28px;
+              margin-bottom: 15px;
+            }
+            p {
+              padding: 0;
+              margin: 0;
+            }
+            .btn {
+              display: inline-block;
+              text-decoration: none;
+              background: #000;
+              color: #fff;
+              font-family: Barlow;
+              font-weight: 600;
+              padding: 12px 36px;
+              margin-top: 20px;
+            }
           }
-          h3 {
-            font-family: Barlow;
-            font-weight: 400;
-            font-size: 28px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+          .imageContainer {
+            width: 60%;
+            .sliderImg {
+              width: 100%;
+              height: 457px;
+              margin-top: -155px;
+              z-index: 0;
+            }
           }
         }
       }

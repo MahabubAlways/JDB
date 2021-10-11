@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React, { useState } from 'react';
 import * as styles from './DarkSlider.module.scss';
@@ -64,10 +64,15 @@ const DarkSlider = () => {
                                 })}
                             </ul>
                         </div>
-                        <div className={styles.content}>
-                            <GatsbyImage className={styles.sliderImg} image={slides[selected].image} alt="" />
-                            <h3>{slides[selected].title}</h3>
-                            <p>{slides[selected].Desc}</p>
+                        <div className={styles.contentContainer}>
+                            <div className={styles.content}>
+                                <h3>{slides[selected].title}</h3>
+                                <p>{slides[selected].Desc}</p>
+                                <Link to="/" className={`btnBlack ${styles.btn}`}>See More</Link>
+                            </div>
+                            <div className={styles.imageContainer}>
+                                <GatsbyImage className={styles.sliderImg} image={slides[selected].image} alt="" />
+                            </div>
                         </div>
                     </div>
                 </div>
