@@ -1,3 +1,5 @@
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React, { useState } from 'react';
@@ -41,7 +43,20 @@ const DarkSlider = () => {
     ]
 
     const [selected, setSelected] = useState(0);
-
+    function Plus(){
+        if(selected >= slides.length - 1){
+          setSelected(0);
+        }else{
+          setSelected(selected + 1);
+        }
+    }
+    function Minus(){
+        if(selected <= 0){
+          setSelected(slides.length - 1);
+        }else{
+          setSelected(selected - 1);
+        }
+    }
     return (
         <div className={styles.section}>
             <div className={styles.container}>
@@ -53,6 +68,14 @@ const DarkSlider = () => {
                 </div>
                 <div className={styles.bottom}>
                     <div className={styles.tab}>
+                        <div className={styles.sliderNav}>
+                            <button aria-label="Previous Slide" onClick={() => Minus()}>
+                                <FontAwesomeIcon icon={faChevronLeft} />
+                            </button>
+                            <button aria-label="Next Slide" onClick={() => Plus()}>
+                                <FontAwesomeIcon icon={faChevronRight} />
+                            </button>
+                        </div>
                         <div className={styles.tabs}>
                             <ul>
                                 {slides.map((item, index) => {
