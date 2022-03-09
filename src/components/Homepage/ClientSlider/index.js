@@ -41,8 +41,8 @@ const ClientSlider = ({data}) => {
             <h2>Clients</h2>
             <div className={styles.client}>
             <Carousel
-                ssr
                 arrows={true}
+                autoPlay={true}
                 infinite={true}
                 autoPlay={false}
                 itemClass="image-item"
